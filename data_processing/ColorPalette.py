@@ -1,6 +1,8 @@
 from PIL import Image
 import datasets
 import pandas as pd
+from datasets import load_dataset
+import torch
 
 _VERSION = datasets.Version("0.0.2")
 METADATA_PATH = r"C:\Users\mlfav\lib\shlee\color_palette\train.jsonl"
@@ -38,16 +40,17 @@ class ColorPalette(datasets.GeneratorBasedBuilder):
             input_colors = data["input_colors"]
             output_colors = data["output_colors"]
 
-            img = Image.open(img_path).convert("RGB")
-            img = img.resize((256, 256))
+            # img = Image.open(img_path).convert("RGB")
+            # img = img.resize((256, 256))
 
             yield idx, {
-                'image': img,
-                'input_colors': input_colors,
-                'output_colors': output_colors,
+                'image': img_path,
+                'input_colors': torch.tensor(input_colors, dtype=torch.float32),
+                'output_colors': torch.tensor(output_colors, dtype=torch.float32),
             }
 
 if __name__ == "__main__":
-    from datasets import load_dataset
     dataset = load_dataset(path=r"C:\Users\mlfav\lib\shlee\color_palette")
-    print(dataset["train"][50])
+    dataset = dataset["train"] # dataset.data.shape = (100, 3)
+    print(type(dataset[0]['input_colors']))
+    
