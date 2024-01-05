@@ -18,8 +18,8 @@ class ColorPalette(datasets.GeneratorBasedBuilder):
             features=datasets.Features(
                 {
                     "image": datasets.features.Value("string"),
-                    "input_colors": datasets.features.Sequence(datasets.features.Sequence(datasets.features.Value("int64"))),
-                    "output_colors": datasets.features.Sequence(datasets.features.Sequence(datasets.features.Value("int64"))),
+                    "input_colors": datasets.features.Sequence(datasets.features.Value("int64")),
+                    "output_colors": datasets.features.Sequence(datasets.features.Value("int64")),
                 }
             ),
         )
@@ -45,12 +45,13 @@ class ColorPalette(datasets.GeneratorBasedBuilder):
 
             yield idx, {
                 'image': img_path,
-                'input_colors': torch.tensor(input_colors, dtype=torch.float32),
-                'output_colors': torch.tensor(output_colors, dtype=torch.float32),
+                'input_colors': torch.flatten(torch.tensor(input_colors, dtype=torch.float32)),
+                'output_colors': torch.flatten(torch.tensor(output_colors, dtype=torch.float32)),
             }
 
 if __name__ == "__main__":
     dataset = load_dataset(path=r"C:\Users\mlfav\lib\shlee\color_palette")
     dataset = dataset["train"] # dataset.data.shape = (100, 3)
+    print(dataset.shape)
     print(type(dataset[0]['input_colors']))
     
