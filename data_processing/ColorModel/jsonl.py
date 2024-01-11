@@ -1,12 +1,14 @@
 import json
 import numpy as np
 import itertools
+import sys
+sys.path.insert(0, '/home/sehyeon/Documents/Favorfit-Color-Recommendation/data_processing/ColorModel/calculate')
 from colorspace_converter import rgb_to_hsv, rgb_to_lab
 from calculate_statistics import *
 
 load_json_file = r'C:\Users\mlfav\lib\shlee\color_palette\train.jsonl'
-json_file_path = r'C:\Users\mlfav\lib\shlee\color_model\ColorModel\train.jsonl'
-count = 0
+json_file_path = r'C:\Users\mlfav\lib\shlee\color_model\ColorModel\train.jsonl' # path to save data
+count = 0 # num of saved images
 
 with open(load_json_file, 'r') as f:
     for line in f:
