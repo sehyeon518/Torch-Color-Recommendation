@@ -5,7 +5,7 @@ import colorsys
 import matplotlib.pyplot as plt
 import numpy as np
 
-image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\perfume.jpg'
+image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\vegemil.jpg'
 color_thief = ColorThief(image_path)
 
 input_palette = color_thief.get_palette(4, 5)
@@ -19,8 +19,6 @@ image = img.imread(image_path)
 def find_complementary_color(rgb):
     return [1.0 - c for c in rgb]
 
-complementary_colors = [find_complementary_color(color) for color in input_palette]
-
 
 # find similar colors
 def find_similar_colors(rgb, tolerance):
@@ -31,9 +29,6 @@ def find_similar_colors(rgb, tolerance):
     similar_colors = [list(colorsys.hsv_to_rgb(h1, s1, v1)), list(colorsys.hsv_to_rgb(h2, s2, v2))]
     return similar_colors
 
-tolerance = 0.1  # 허용 범위
-similar_colors = sum([find_similar_colors(color, tolerance) for color in input_palette], [])
-
 
 # find triadic colors
 def find_triadic_colors(rgb):
@@ -42,18 +37,13 @@ def find_triadic_colors(rgb):
 
     return [[(h + 0.33) % 1.0, l, s], [(h - 0.33) % 1.0, l, s]]
 
-triadic_colors = sum([find_triadic_colors(color) for color in input_palette], [])
-
-
-compatible_colors = complementary_colors + similar_colors + triadic_colors
-combinations = list(itertools.combinations(compatible_colors, 4))
-
 
 def rgb_to_lab(rgb):
     xyz = rgb_to_xyz(rgb)
     lab = xyz_to_lab(xyz)
 
     return lab
+
 
 def rgb_to_xyz(rgb):
     matrix = np.array([[0.4124564, 0.3575761, 0.1804375],
@@ -63,6 +53,7 @@ def rgb_to_xyz(rgb):
     xyz = np.dot(np.power(rgb, 2.2), matrix.T)
 
     return xyz
+
 
 def xyz_to_lab(xyz):
     ref_white = np.array([0.95047, 1.00000, 1.08883])
@@ -89,6 +80,7 @@ def calculate_HSY(hab):
     # HSY
     HSY = EC * (HS + np.e)
     return HSY
+
 
 def calculate_CH(L1, Cab1, hab1, L2, Cab2, hab2):
     # ∆C
@@ -117,6 +109,7 @@ def calculate_CH(L1, Cab1, hab1, L2, Cab2, hab2):
 
     return CH
 
+
 def color_harmony(lab1, lab2):
     # Extract LAB values
     L1, a1, b1 = lab1
@@ -129,13 +122,23 @@ def color_harmony(lab1, lab2):
     return result
 
 
-CH_max = 100000000000
+complementary_colors = [find_complementary_color(color) for color in input_palette]
+tolerance = 0.1  # 허용 범위
+similar_colors = sum([find_similar_colors(color, tolerance) for color in input_palette], [])
+triadic_colors = sum([find_triadic_colors(color) for color in input_palette], [])
+
+
+compatible_colors = complementary_colors + similar_colors + triadic_colors
+combinations = list(itertools.combinations(compatible_colors, 4)) # recommend combination
+
+
+CH_min = 100000 # Color Harmony value
 best_palette = input_palette
 for combination in combinations:
-    combination = list(combination)
-    palette_RGB = input_palette + combination
+    combination = list(combination) # one of recommend combination
+    palette_RGB = input_palette + combination # original palette + recommend combincation
     palette_LAB = np.array([rgb_to_lab(rgb) for rgb in palette_RGB])
-    palette_LAB = palette_LAB[np.argsort(palette_LAB[:, 0])]
+    palette_LAB = palette_LAB[np.argsort(palette_LAB[:, 0])] # sorting the array by Lightness
 
     CH_tmp = 0
     for i in range(len(palette_LAB)):
@@ -143,11 +146,12 @@ for combination in combinations:
             ch_value = color_harmony(palette_LAB[i], palette_LAB[j])
             CH_tmp += ch_value
     
-    # best palette update
-    if CH_tmp < CH_max:
-        CH_max = CH_tmp
+    # best palette combination update
+    if CH_tmp < CH_min:
+        CH_min = CH_tmp
         best_palette = palette_RGB
 
 print(best_palette)
-plt.imshow([best_palette])
+plt.imshow([best_palette[4:]])
+plt.axis(False)
 plt.show()
