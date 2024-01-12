@@ -152,6 +152,6 @@ for combination in combinations:
         best_palette = palette_RGB
 
 print(best_palette)
-plt.imshow([best_palette[4:]])
+plt.imshow([best_palette])
 plt.axis(False)
 plt.show()
