@@ -28,9 +28,7 @@ def rgb_to_hsv(r, g, b):
     return round(H, 3), round(S*100, 3), round(V*100, 3)
 
 
-def rgb_to_lab(rgb):
-    r, g, b = rgb
-
+def rgb_to_lab(r, g, b):
     # Convert RGB to XYZ
     r = 100.0 * (r / 255.0)
     g = 100.0 * (g / 255.0)
@@ -92,8 +90,9 @@ def rgb_to_lab(rgb):
 
 if __name__ == "__main__":
     rgb_values = (255, 0, 0)
+    r, g, b = rgb_values
     hsv_values = rgb_to_hsv(*rgb_values)
-    lab_values = rgb_to_lab(rgb_values)
+    lab_values = rgb_to_lab(r, g, b)
     print("RGB:", rgb_values)
     print("HSV:", hsv_values)
     print("LAB:", lab_values)
