@@ -1,6 +1,5 @@
 from colorthief import ColorThief
 import colorsys
-import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -115,12 +114,32 @@ def color_harmony(lab1, lab2):
 
 
 def main(image_path, color_type):
+    """
+    주어진 이미지에서 색상을 추출하고, 지정된 유형에 따라 변환된 색상을 반환한다.
+
+    Parameters:
+    - image_path (str): 분석할 이미지 파일의 경로.
+    - color_type (str): 반환할 색상의 유형. "complementary", "similar", "triadic" 중 하나.
+
+    Returns:
+    - list: 변환된 색상을 담은 리스트. 각 색상은 [r, g, b] 형태의 정규화된 RGB 값.
+
+    Raises:
+    - ValueError: color_type이 올바른 값("complementary", "similar", "triadic")이 아닌 경우.
+
+    Example:
+    >>> main("path/to/image.jpg", "complementary")
+    [[0.5, 0.2, 0.7], [0.8, 0.1, 0.3], ...]
+    """
+
     color_thief = ColorThief(image_path)
 
     input_palette = color_thief.get_palette(4, 1)
     for i, (r, g, b) in enumerate(input_palette):
         input_palette[i] = [r/255.0, g/255.0, b/255.0]
 
+    if color_type not in ["complementary", "similar", "triadic"]:
+        raise ValueError("color_type should be one of 'complementary', 'similar', 'triadic'.")
     if color_type == "complementary":
         complementary_colors = [find_complementary_color(color) for color in input_palette]
         return complementary_colors
@@ -132,13 +151,13 @@ def main(image_path, color_type):
         triadic_tolerance = 0.1
         triadic_colors = sum([find_triadic_colors(color, triadic_tolerance) for color in input_palette], [])
         return triadic_colors
-    else:
-        return [0, 0, 0]
     
 
 if __name__ == "__main__":
     image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\dalba_removebg.png'
     
-    recommend_palette = main(image_path, "triadic")
+    recommend_palette = main(image_path, "complementary")
+    
+    import matplotlib.pyplot as plt
     plt.imshow([recommend_palette])
     plt.show()
