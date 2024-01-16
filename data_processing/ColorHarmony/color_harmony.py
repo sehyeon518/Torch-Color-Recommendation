@@ -15,18 +15,21 @@ def find_complementary_color(rgb):
 def find_similar_colors(rgb, tolerance):
     r, g, b = rgb
     h, s, v = colorsys.rgb_to_hsv(r, g, b)
-    h1, s1, v1 = (h+tolerance)%1.0, max(0, min(1.0, s-tolerance)), v
-    h2, s2, v2 = (h-tolerance)%1.0, max(0, min(1.0, s+tolerance)), v
+    h1, s1, v1 = (h+tolerance)%1.0, s, v
+    h2, s2, v2 = (h-tolerance)%1.0, s, v
     similar_colors = [list(colorsys.hsv_to_rgb(h1, s1, v1)), list(colorsys.hsv_to_rgb(h2, s2, v2))]
     return similar_colors
 
 
 # find triadic colors
-def find_triadic_colors(rgb):
+def find_triadic_colors(rgb, tolerance):
     r, g, b = rgb
-    h, s, l = colorsys.rgb_to_hls(r, g, b)
+    h, l, s = colorsys.rgb_to_hls(r, g, b)
+    h = (0.5 - h) % 1.0
+    h1, l1, s1 = (h + tolerance)%1.0, l, s - 0.25
+    h2, l2, s2 = (h - tolerance)%1.0, l, s - 0.25
 
-    return [[(h + 0.33) % 1.0, l, s], [(h - 0.33) % 1.0, l, s]]
+    return [list(colorsys.hls_to_rgb(h1, l1, s1)), list(colorsys.hls_to_rgb(h2, l2, s2))]
 
 
 def rgb_to_lab(rgb):
@@ -114,7 +117,7 @@ def color_harmony(lab1, lab2):
 
 
 if __name__ == "__main__":
-    image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\kahi_removebg.png'
+    image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\dalba_removebg.png'
     color_thief = ColorThief(image_path)
 
     input_palette = color_thief.get_palette(4, 1)
@@ -125,9 +128,10 @@ if __name__ == "__main__":
 
 
     complementary_colors = [find_complementary_color(color) for color in input_palette]
-    tolerance = 0.1  # 허용 범위
-    similar_colors = sum([find_similar_colors(color, tolerance) for color in input_palette], [])
-    triadic_colors = sum([find_triadic_colors(color) for color in input_palette], [])
+    comple_tolerance = 0.03  # 허용 범위
+    similar_colors = sum([find_similar_colors(color, comple_tolerance) for color in input_palette], [])
+    triadic_tolerance = 0.1
+    triadic_colors = sum([find_triadic_colors(color, triadic_tolerance) for color in input_palette], [])
 
     plt.subplot(2, 3, 1)
     plt.imshow(image)
@@ -153,32 +157,32 @@ if __name__ == "__main__":
     plt.axis(False)
 
 
-    compatible_colors = complementary_colors + similar_colors + triadic_colors
-    combinations = list(itertools.combinations(compatible_colors, 4)) # recommend combination
+    # compatible_colors = complementary_colors + similar_colors + triadic_colors
+    # combinations = list(itertools.combinations(compatible_colors, 4)) # recommend combination
 
 
-    CH_min = 0 # Color Harmony value
-    best_palette = input_palette
-    for combination in combinations:
-        combination = list(combination) # one of recommend combination
-        palette_RGB = input_palette + combination # original palette + recommend combincation
-        palette_LAB = np.array([rgb_to_lab(rgb) for rgb in palette_RGB])
-        palette_LAB = palette_LAB[np.argsort(palette_LAB[:, 0])] # sorting the array by Lightness
+    # CH_min = 0 # Color Harmony value
+    # best_palette = input_palette
+    # for combination in combinations:
+    #     combination = list(combination) # one of recommend combination
+    #     palette_RGB = input_palette + combination # original palette + recommend combincation
+    #     palette_LAB = np.array([rgb_to_lab(rgb) for rgb in palette_RGB])
+    #     palette_LAB = palette_LAB[np.argsort(palette_LAB[:, 0])] # sorting the array by Lightness
 
-        CH_tmp = 0
-        for i in range(len(palette_LAB)):
-            for j in range(i + 1, len(palette_LAB)):
-                ch_value = color_harmony(palette_LAB[i], palette_LAB[j])
-                CH_tmp += ch_value
+    #     CH_tmp = 0
+    #     for i in range(len(palette_LAB)):
+    #         for j in range(i + 1, len(palette_LAB)):
+    #             ch_value = color_harmony(palette_LAB[i], palette_LAB[j])
+    #             CH_tmp += ch_value
         
-        # best palette combination update
-        if CH_tmp > CH_min:
-            CH_min = CH_tmp
-            best_palette = palette_RGB
+    #     # best palette combination update
+    #     if CH_tmp > CH_min:
+    #         CH_min = CH_tmp
+    #         best_palette = palette_RGB
 
-    print(best_palette)
-    plt.subplot(2, 3, 3)
-    plt.imshow([best_palette[4:]])
-    plt.axis(False)
+    # print(best_palette)
+    # plt.subplot(2, 3, 3)
+    # plt.imshow([best_palette[4:]])
+    # plt.axis(False)
 
     plt.show()
