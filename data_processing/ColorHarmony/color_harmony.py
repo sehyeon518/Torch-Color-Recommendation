@@ -1,6 +1,5 @@
 from colorthief import ColorThief
 import colorsys
-import numpy as np
 
 
 # find complementary colors
@@ -76,8 +75,9 @@ def main(image_path, color_type):
 if __name__ == "__main__":
     image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\dalba_removebg.png'
     
-    recommend_palette = main(image_path, "complementary")
+    recommend_palette = main(image_path, "triadic")
 
     import matplotlib.pyplot as plt
     plt.imshow([recommend_palette])
+    plt.axis('off')
     plt.show()
