@@ -85,9 +85,7 @@ def main(image_path, color_type):
 if __name__ == "__main__":
     image_path = r"C:\Users\mlfav\lib\shlee\color_harmony\dalba_removebg.png"
 
-    recommend_palette = main(
-        "data_processing/ColorHarmony/vegemil.jpg", "complementary"
-    )
+    recommend_palette = main(image_path, "complementary")
 
     import matplotlib.pyplot as plt
 
