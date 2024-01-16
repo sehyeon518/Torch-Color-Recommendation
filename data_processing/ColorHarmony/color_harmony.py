@@ -1,6 +1,4 @@
-import itertools
 from colorthief import ColorThief
-import matplotlib.image as img
 import colorsys
 import matplotlib.pyplot as plt
 import numpy as np
@@ -116,73 +114,31 @@ def color_harmony(lab1, lab2):
     return result
 
 
-if __name__ == "__main__":
-    image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\dalba_removebg.png'
+def main(image_path, color_type):
     color_thief = ColorThief(image_path)
 
     input_palette = color_thief.get_palette(4, 1)
     for i, (r, g, b) in enumerate(input_palette):
         input_palette[i] = [r/255.0, g/255.0, b/255.0]
 
-    image = img.imread(image_path)
+    if color_type == "complementary":
+        complementary_colors = [find_complementary_color(color) for color in input_palette]
+        return complementary_colors
+    elif color_type == "similar":
+        similar_tolerance = 0.03  # 허용 범위
+        similar_colors = sum([find_similar_colors(color, similar_tolerance) for color in input_palette], [])
+        return similar_colors
+    elif color_type == "triadic":
+        triadic_tolerance = 0.1
+        triadic_colors = sum([find_triadic_colors(color, triadic_tolerance) for color in input_palette], [])
+        return triadic_colors
+    else:
+        return [0, 0, 0]
+    
 
-
-    complementary_colors = [find_complementary_color(color) for color in input_palette]
-    comple_tolerance = 0.03  # 허용 범위
-    similar_colors = sum([find_similar_colors(color, comple_tolerance) for color in input_palette], [])
-    triadic_tolerance = 0.1
-    triadic_colors = sum([find_triadic_colors(color, triadic_tolerance) for color in input_palette], [])
-
-    plt.subplot(2, 3, 1)
-    plt.imshow(image)
-    plt.axis(False)
-
-    plt.subplot(2, 3, 2)
-    plt.imshow([input_palette])
-    plt.axis(False)
-
-    plt.subplot(2,3,4)
-    plt.imshow([complementary_colors])
-    plt.title("complementary colors")
-    plt.axis(False)
-
-    plt.subplot(2, 3, 5)
-    plt.imshow([similar_colors])
-    plt.title("similar colors")
-    plt.axis(False)
-
-    plt.subplot(2, 3, 6)
-    plt.imshow([triadic_colors])
-    plt.title("triadic colors")
-    plt.axis(False)
-
-
-    # compatible_colors = complementary_colors + similar_colors + triadic_colors
-    # combinations = list(itertools.combinations(compatible_colors, 4)) # recommend combination
-
-
-    # CH_min = 0 # Color Harmony value
-    # best_palette = input_palette
-    # for combination in combinations:
-    #     combination = list(combination) # one of recommend combination
-    #     palette_RGB = input_palette + combination # original palette + recommend combincation
-    #     palette_LAB = np.array([rgb_to_lab(rgb) for rgb in palette_RGB])
-    #     palette_LAB = palette_LAB[np.argsort(palette_LAB[:, 0])] # sorting the array by Lightness
-
-    #     CH_tmp = 0
-    #     for i in range(len(palette_LAB)):
-    #         for j in range(i + 1, len(palette_LAB)):
-    #             ch_value = color_harmony(palette_LAB[i], palette_LAB[j])
-    #             CH_tmp += ch_value
-        
-    #     # best palette combination update
-    #     if CH_tmp > CH_min:
-    #         CH_min = CH_tmp
-    #         best_palette = palette_RGB
-
-    # print(best_palette)
-    # plt.subplot(2, 3, 3)
-    # plt.imshow([best_palette[4:]])
-    # plt.axis(False)
-
+if __name__ == "__main__":
+    image_path = r'C:\Users\mlfav\lib\shlee\color_harmony\dalba_removebg.png'
+    
+    recommend_palette = main(image_path, "triadic")
+    plt.imshow([recommend_palette])
     plt.show()
