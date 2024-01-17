@@ -40,6 +40,8 @@ for i in range(70):
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 colors = soup.find_all('div', class_='color-card')
 
+color_number = 0
+
 for color in colors:
     color_div = color.find('div', class_='color-card_color')
     color_name = color.find('a', class_='color-card_name')
@@ -53,9 +55,12 @@ for color in colors:
             name_text = color_name.get_text(strip=True)
 
             color_data = {
+                'color_number': color_number,
                 'color_name': name_text,
                 'color_rgb': rgb_values
             }
+
+            color_number += 1
 
             with open("/home/sehyeon/Documents/Favorfit-Color-Recommendation/color_classification/list_of_colors.jsonl", 'a') as file:
                 json.dump(color_data, file)
