@@ -34,7 +34,6 @@ for i in range(70):
     try:
         body.send_keys(Keys.PAGE_DOWN)
         time.sleep(1)
-        print(i)
     except:
         pass
 
@@ -48,13 +47,14 @@ for color in colors:
     if color_div and color_name:
         style_attribute = color_div.get('style')
         if style_attribute:
-            background_value = style_attribute.split(":")[1].strip()[:-1]
+            background_value = style_attribute.split("rgb(")[1].split(')')[0].strip()
+            rgb_values = list(map(int, background_value.split(',')))
 
             name_text = color_name.get_text(strip=True)
 
             color_data = {
                 'color_name': name_text,
-                'background_rgb': background_value
+                'color_rgb': rgb_values
             }
 
             with open("/home/sehyeon/Documents/Favorfit-Color-Recommendation/color_classification/list_of_colors.jsonl", 'a') as file:
