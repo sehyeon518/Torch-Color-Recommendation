@@ -1,0 +1,540 @@
+{"color_name": "Amaranth purple", "background_rgb": "rgb(171, 39, 79)"}
+{"color_name": "Barn red", "background_rgb": "rgb(124, 9, 2)"}
+{"color_name": "Bittersweet", "background_rgb": "rgb(254, 111, 94)"}
+{"color_name": "Bittersweet shimmer", "background_rgb": "rgb(191, 79, 81)"}
+{"color_name": "Blood red", "background_rgb": "rgb(102, 0, 0)"}
+{"color_name": "Bright pink (Crayola)", "background_rgb": "rgb(251, 96, 127)"}
+{"color_name": "Burgundy", "background_rgb": "rgb(128, 0, 32)"}
+{"color_name": "Candy apple red", "background_rgb": "rgb(255, 8, 0)"}
+{"color_name": "Cantaloupe melon", "background_rgb": "rgb(253, 188, 180)"}
+{"color_name": "Cardinal", "background_rgb": "rgb(197, 30, 58)"}
+{"color_name": "Carmine", "background_rgb": "rgb(150, 0, 24)"}
+{"color_name": "Cerise", "background_rgb": "rgb(222, 49, 99)"}
+{"color_name": "Chili red", "background_rgb": "rgb(226, 61, 40)"}
+{"color_name": "Chocolate cosmos", "background_rgb": "rgb(88, 17, 26)"}
+{"color_name": "Cinnabar", "background_rgb": "rgb(228, 77, 46)"}
+{"color_name": "Claret", "background_rgb": "rgb(127, 23, 52)"}
+{"color_name": "Coquelicot", "background_rgb": "rgb(255, 56, 0)"}
+{"color_name": "Coral pink", "background_rgb": "rgb(248, 131, 121)"}
+{"color_name": "Cordovan", "background_rgb": "rgb(137, 63, 69)"}
+{"color_name": "Cornell red", "background_rgb": "rgb(179, 27, 27)"}
+{"color_name": "Crimson", "background_rgb": "rgb(220, 20, 60)"}
+{"color_name": "Dark red", "background_rgb": "rgb(139, 0, 0)"}
+{"color_name": "Falu red", "background_rgb": "rgb(128, 24, 24)"}
+{"color_name": "Fire brick", "background_rgb": "rgb(178, 34, 34)"}
+{"color_name": "Fire engine red", "background_rgb": "rgb(206, 32, 41)"}
+{"color_name": "Folly", "background_rgb": "rgb(255, 0, 79)"}
+{"color_name": "Garnet", "background_rgb": "rgb(115, 54, 53)"}
+{"color_name": "Imperial red", "background_rgb": "rgb(237, 41, 57)"}
+{"color_name": "Indian red", "background_rgb": "rgb(205, 92, 92)"}
+{"color_name": "Jasper", "background_rgb": "rgb(208, 83, 64)"}
+{"color_name": "Light coral", "background_rgb": "rgb(240, 128, 128)"}
+{"color_name": "Light red", "background_rgb": "rgb(255, 127, 127)"}
+{"color_name": "Madder", "background_rgb": "rgb(165, 0, 33)"}
+{"color_name": "Mahogany", "background_rgb": "rgb(192, 64, 0)"}
+{"color_name": "Maroon", "background_rgb": "rgb(128, 0, 0)"}
+{"color_name": "Misty rose", "background_rgb": "rgb(255, 228, 225)"}
+{"color_name": "Off Red (RGB)", "background_rgb": "rgb(254, 0, 0)"}
+{"color_name": "Old rose", "background_rgb": "rgb(192, 128, 129)"}
+{"color_name": "OU crimson", "background_rgb": "rgb(132, 22, 23)"}
+{"color_name": "Penn red", "background_rgb": "rgb(153, 0, 0)"}
+{"color_name": "Persian red", "background_rgb": "rgb(204, 51, 51)"}
+{"color_name": "Pink", "background_rgb": "rgb(255, 192, 203)"}
+{"color_name": "Poppy", "background_rgb": "rgb(220, 52, 59)"}
+{"color_name": "Red", "background_rgb": "rgb(255, 0, 0)"}
+{"color_name": "Red Brown", "background_rgb": "rgb(165, 42, 42)"}
+{"color_name": "Red (CMYK)", "background_rgb": "rgb(237, 27, 36)"}
+{"color_name": "Red (Crayola)", "background_rgb": "rgb(238, 32, 78)"}
+{"color_name": "Red (Munsell)", "background_rgb": "rgb(242, 0, 60)"}
+{"color_name": "Red (NCS)", "background_rgb": "rgb(196, 2, 52)"}
+{"color_name": "Red (Pantone)", "background_rgb": "rgb(237, 40, 57)"}
+{"color_name": "Redwood", "background_rgb": "rgb(171, 78, 82)"}
+{"color_name": "Rojo", "background_rgb": "rgb(230, 0, 38)"}
+{"color_name": "Rose", "background_rgb": "rgb(255, 0, 128)"}
+{"color_name": "Rose ebony", "background_rgb": "rgb(103, 72, 70)"}
+{"color_name": "Rose red", "background_rgb": "rgb(194, 30, 86)"}
+{"color_name": "Rose taupe", "background_rgb": "rgb(144, 93, 93)"}
+{"color_name": "Rosewood", "background_rgb": "rgb(101, 0, 11)"}
+{"color_name": "Rosy brown", "background_rgb": "rgb(188, 143, 143)"}
+{"color_name": "Rust", "background_rgb": "rgb(183, 65, 14)"}
+{"color_name": "Rusty red", "background_rgb": "rgb(218, 44, 67)"}
+{"color_name": "Salmon", "background_rgb": "rgb(250, 128, 114)"}
+{"color_name": "Salmon pink", "background_rgb": "rgb(255, 145, 164)"}
+{"color_name": "Scarlet", "background_rgb": "rgb(255, 36, 0)"}
+{"color_name": "Syracuse Red Orange", "background_rgb": "rgb(212, 69, 0)"}
+{"color_name": "Tea rose (red)", "background_rgb": "rgb(244, 194, 194)"}
+{"color_name": "Tomato", "background_rgb": "rgb(255, 99, 71)"}
+{"color_name": "Turkey red", "background_rgb": "rgb(169, 17, 1)"}
+{"color_name": "Vermilion", "background_rgb": "rgb(227, 66, 52)"}
+{"color_name": "Wine", "background_rgb": "rgb(114, 47, 55)"}
+{"color_name": "Aerospace orange", "background_rgb": "rgb(255, 79, 0)"}
+{"color_name": "Alloy orange", "background_rgb": "rgb(196, 98, 16)"}
+{"color_name": "Amber", "background_rgb": "rgb(255, 191, 0)"}
+{"color_name": "Apricot", "background_rgb": "rgb(251, 206, 177)"}
+{"color_name": "Atomic tangerine", "background_rgb": "rgb(255, 153, 102)"}
+{"color_name": "Brown", "background_rgb": "rgb(150, 75, 0)"}
+{"color_name": "Burnt orange", "background_rgb": "rgb(191, 87, 0)"}
+{"color_name": "Butterscotch", "background_rgb": "rgb(224, 149, 64)"}
+{"color_name": "Carrot orange", "background_rgb": "rgb(237, 145, 33)"}
+{"color_name": "Champagne (color)", "background_rgb": "rgb(247, 231, 206)"}
+{"color_name": "Coral", "background_rgb": "rgb(255, 127, 80)"}
+{"color_name": "Dark orange (web)", "background_rgb": "rgb(255, 140, 0)"}
+{"color_name": "Desert sand (color)", "background_rgb": "rgb(237, 201, 175)"}
+{"color_name": "Engineering orange", "background_rgb": "rgb(186, 22, 12)"}
+{"color_name": "Flame", "background_rgb": "rgb(226, 88, 34)"}
+{"color_name": "Giants orange", "background_rgb": "rgb(254, 90, 29)"}
+{"color_name": "Gold", "background_rgb": "rgb(255, 215, 0)"}
+{"color_name": "Golden Gate Bridge", "background_rgb": "rgb(240, 74, 0)"}
+{"color_name": "Goldenrod", "background_rgb": "rgb(218, 165, 32)"}
+{"color_name": "Hunyadi yellow", "background_rgb": "rgb(232, 172, 65)"}
+{"color_name": "Light orange", "background_rgb": "rgb(254, 216, 177)"}
+{"color_name": "Orange (Crayola)", "background_rgb": "rgb(255, 117, 56)"}
+{"color_name": "Orange (Pantone)", "background_rgb": "rgb(255, 88, 0)"}
+{"color_name": "Orange peel", "background_rgb": "rgb(255, 160, 0)"}
+{"color_name": "Orange (web)", "background_rgb": "rgb(255, 165, 0)"}
+{"color_name": "Orange (wheel)", "background_rgb": "rgb(255, 128, 0)"}
+{"color_name": "Papaya whip", "background_rgb": "rgb(255, 239, 213)"}
+{"color_name": "Peach", "background_rgb": "rgb(255, 229, 180)"}
+{"color_name": "Persian orange", "background_rgb": "rgb(217, 144, 88)"}
+{"color_name": "Persimmon", "background_rgb": "rgb(236, 88, 0)"}
+{"color_name": "Princeton orange", "background_rgb": "rgb(255, 143, 0)"}
+{"color_name": "Pumpkin", "background_rgb": "rgb(255, 117, 24)"}
+{"color_name": "Safety orange", "background_rgb": "rgb(255, 121, 0)"}
+{"color_name": "Saffron", "background_rgb": "rgb(244, 196, 48)"}
+{"color_name": "Spanish orange", "background_rgb": "rgb(232, 97, 0)"}
+{"color_name": "Tangelo", "background_rgb": "rgb(249, 77, 0)"}
+{"color_name": "Tangerine", "background_rgb": "rgb(242, 133, 0)"}
+{"color_name": "Tawny", "background_rgb": "rgb(205, 87, 0)"}
+{"color_name": "Tiger\u2019s Eye", "background_rgb": "rgb(181, 105, 23)"}
+{"color_name": "UT orange", "background_rgb": "rgb(255, 130, 0)"}
+{"color_name": "Xanthous", "background_rgb": "rgb(241, 180, 47)"}
+{"color_name": "Almond", "background_rgb": "rgb(239, 222, 205)"}
+{"color_name": "Beaver", "background_rgb": "rgb(159, 129, 112)"}
+{"color_name": "Beige", "background_rgb": "rgb(245, 245, 220)"}
+{"color_name": "Bistre", "background_rgb": "rgb(61, 43, 31)"}
+{"color_name": "Black bean", "background_rgb": "rgb(61, 12, 2)"}
+{"color_name": "Black olive", "background_rgb": "rgb(59, 60, 54)"}
+{"color_name": "Bole", "background_rgb": "rgb(121, 68, 59)"}
+{"color_name": "Bone", "background_rgb": "rgb(227, 218, 201)"}
+{"color_name": "Bronze", "background_rgb": "rgb(205, 127, 50)"}
+{"color_name": "Brown", "background_rgb": "rgb(153, 51, 0)"}
+{"color_name": "Brown sugar", "background_rgb": "rgb(175, 110, 77)"}
+{"color_name": "Buff", "background_rgb": "rgb(218, 160, 109)"}
+{"color_name": "Burnt sienna", "background_rgb": "rgb(233, 116, 81)"}
+{"color_name": "Burnt umber", "background_rgb": "rgb(138, 51, 36)"}
+{"color_name": "Camel", "background_rgb": "rgb(193, 154, 107)"}
+{"color_name": "Caput mortuum", "background_rgb": "rgb(89, 39, 32)"}
+{"color_name": "Caramel", "background_rgb": "rgb(204, 127, 59)"}
+{"color_name": "Chamoisee", "background_rgb": "rgb(160, 120, 90)"}
+{"color_name": "Chestnut", "background_rgb": "rgb(149, 69, 53)"}
+{"color_name": "Chocolate", "background_rgb": "rgb(123, 63, 0)"}
+{"color_name": "Citron", "background_rgb": "rgb(221, 208, 106)"}
+{"color_name": "Cocoa Brown", "background_rgb": "rgb(210, 105, 30)"}
+{"color_name": "Coffee", "background_rgb": "rgb(111, 78, 55)"}
+{"color_name": "Copper", "background_rgb": "rgb(184, 115, 51)"}
+{"color_name": "Coyote", "background_rgb": "rgb(129, 97, 62)"}
+{"color_name": "Drab dark brown", "background_rgb": "rgb(74, 65, 42)"}
+{"color_name": "Dun", "background_rgb": "rgb(218, 200, 174)"}
+{"color_name": "Earth yellow", "background_rgb": "rgb(225, 169, 95)"}
+{"color_name": "Ecru", "background_rgb": "rgb(194, 178, 128)"}
+{"color_name": "Fawn", "background_rgb": "rgb(229, 170, 112)"}
+{"color_name": "Field drab", "background_rgb": "rgb(108, 84, 30)"}
+{"color_name": "Fulvous", "background_rgb": "rgb(228, 132, 0)"}
+{"color_name": "Golden brown", "background_rgb": "rgb(153, 101, 21)"}
+{"color_name": "Harvest gold", "background_rgb": "rgb(218, 145, 0)"}
+{"color_name": "Khaki", "background_rgb": "rgb(195, 176, 145)"}
+{"color_name": "Kobicha", "background_rgb": "rgb(107, 68, 35)"}
+{"color_name": "Liver", "background_rgb": "rgb(103, 76, 71)"}
+{"color_name": "Ochre", "background_rgb": "rgb(204, 119, 34)"}
+{"color_name": "Raw umber", "background_rgb": "rgb(146, 102, 68)"}
+{"color_name": "Redwood", "background_rgb": "rgb(164, 90, 82)"}
+{"color_name": "Rufous", "background_rgb": "rgb(168, 28, 7)"}
+{"color_name": "Russet", "background_rgb": "rgb(128, 70, 27)"}
+{"color_name": "Sandy brown", "background_rgb": "rgb(244, 164, 96)"}
+{"color_name": "Satin sheen gold", "background_rgb": "rgb(203, 161, 53)"}
+{"color_name": "Seal brown", "background_rgb": "rgb(89, 38, 11)"}
+{"color_name": "Sepia", "background_rgb": "rgb(112, 66, 20)"}
+{"color_name": "Sienna", "background_rgb": "rgb(136, 45, 23)"}
+{"color_name": "Sinopia", "background_rgb": "rgb(203, 65, 11)"}
+{"color_name": "Tan", "background_rgb": "rgb(210, 180, 140)"}
+{"color_name": "Taupe", "background_rgb": "rgb(72, 60, 50)"}
+{"color_name": "Umber", "background_rgb": "rgb(99, 81, 71)"}
+{"color_name": "Van Dyke", "background_rgb": "rgb(68, 54, 47)"}
+{"color_name": "Walnut brown", "background_rgb": "rgb(92, 82, 72)"}
+{"color_name": "Wenge", "background_rgb": "rgb(100, 84, 82)"}
+{"color_name": "Wheat", "background_rgb": "rgb(245, 222, 179)"}
+{"color_name": "Arylide yellow", "background_rgb": "rgb(233, 214, 107)"}
+{"color_name": "Aureolin", "background_rgb": "rgb(253, 238, 0)"}
+{"color_name": "Buff", "background_rgb": "rgb(224, 171, 118)"}
+{"color_name": "Canary", "background_rgb": "rgb(255, 239, 0)"}
+{"color_name": "Chartreuse", "background_rgb": "rgb(223, 255, 0)"}
+{"color_name": "Citrine", "background_rgb": "rgb(228, 208, 10)"}
+{"color_name": "Cosmic latte", "background_rgb": "rgb(255, 248, 231)"}
+{"color_name": "Cream", "background_rgb": "rgb(255, 253, 208)"}
+{"color_name": "Dark goldenrod", "background_rgb": "rgb(184, 134, 11)"}
+{"color_name": "Ecru", "background_rgb": "rgb(205, 178, 128)"}
+{"color_name": "Flax", "background_rgb": "rgb(238, 220, 130)"}
+{"color_name": "Gamboge", "background_rgb": "rgb(239, 155, 15)"}
+{"color_name": "Gold (metallic)", "background_rgb": "rgb(212, 175, 55)"}
+{"color_name": "Harvest gold", "background_rgb": "rgb(230, 168, 23)"}
+{"color_name": "Icterine", "background_rgb": "rgb(252, 247, 94)"}
+{"color_name": "Ivory", "background_rgb": "rgb(255, 255, 240)"}
+{"color_name": "Jasmine", "background_rgb": "rgb(248, 222, 126)"}
+{"color_name": "Jonquil", "background_rgb": "rgb(250, 202, 22)"}
+{"color_name": "Lemon chiffon", "background_rgb": "rgb(255, 250, 205)"}
+{"color_name": "Lemon Lime", "background_rgb": "rgb(227, 255, 0)"}
+{"color_name": "Light yellow", "background_rgb": "rgb(255, 255, 224)"}
+{"color_name": "Maize", "background_rgb": "rgb(251, 236, 93)"}
+{"color_name": "Mikado yellow", "background_rgb": "rgb(255, 196, 12)"}
+{"color_name": "Mindaro", "background_rgb": "rgb(227, 249, 136)"}
+{"color_name": "Mustard", "background_rgb": "rgb(255, 219, 88)"}
+{"color_name": "Naples yellow", "background_rgb": "rgb(250, 218, 94)"}
+{"color_name": "Navajo white", "background_rgb": "rgb(255, 222, 173)"}
+{"color_name": "Old gold", "background_rgb": "rgb(207, 181, 59)"}
+{"color_name": "Olive", "background_rgb": "rgb(128, 128, 0)"}
+{"color_name": "Peach Yellow", "background_rgb": "rgb(250, 223, 173)"}
+{"color_name": "Pear", "background_rgb": "rgb(209, 226, 49)"}
+{"color_name": "Saffron", "background_rgb": "rgb(244, 196, 49)"}
+{"color_name": "School bus yellow", "background_rgb": "rgb(255, 216, 0)"}
+{"color_name": "Selective yellow", "background_rgb": "rgb(255, 186, 0)"}
+{"color_name": "Straw", "background_rgb": "rgb(228, 217, 111)"}
+{"color_name": "Sunglow", "background_rgb": "rgb(255, 204, 51)"}
+{"color_name": "Sunset", "background_rgb": "rgb(250, 214, 165)"}
+{"color_name": "Vanilla", "background_rgb": "rgb(243, 229, 171)"}
+{"color_name": "Yellow", "background_rgb": "rgb(255, 255, 0)"}
+{"color_name": "Apple green", "background_rgb": "rgb(141, 182, 0)"}
+{"color_name": "Aquamarine", "background_rgb": "rgb(0, 255, 191)"}
+{"color_name": "Asparagus", "background_rgb": "rgb(123, 160, 91)"}
+{"color_name": "Avocado", "background_rgb": "rgb(86, 130, 3)"}
+{"color_name": "Bright green", "background_rgb": "rgb(102, 255, 0)"}
+{"color_name": "British racing green", "background_rgb": "rgb(0, 66, 37)"}
+{"color_name": "Brunswick green", "background_rgb": "rgb(27, 77, 62)"}
+{"color_name": "Cal Poly green", "background_rgb": "rgb(30, 77, 43)"}
+{"color_name": "Castleton green", "background_rgb": "rgb(0, 86, 59)"}
+{"color_name": "Celadon", "background_rgb": "rgb(172, 225, 175)"}
+{"color_name": "Chartreuse", "background_rgb": "rgb(128, 255, 0)"}
+{"color_name": "Cyan", "background_rgb": "rgb(0, 255, 255)"}
+{"color_name": "Dark green", "background_rgb": "rgb(1, 50, 32)"}
+{"color_name": "Dark moss green", "background_rgb": "rgb(74, 93, 35)"}
+{"color_name": "Dark pastel green", "background_rgb": "rgb(3, 192, 60)"}
+{"color_name": "Dark spring green", "background_rgb": "rgb(23, 114, 69)"}
+{"color_name": "Dartmouth green", "background_rgb": "rgb(0, 105, 62)"}
+{"color_name": "Emerald", "background_rgb": "rgb(80, 200, 120)"}
+{"color_name": "Erin", "background_rgb": "rgb(0, 255, 64)"}
+{"color_name": "Fern green", "background_rgb": "rgb(79, 121, 66)"}
+{"color_name": "Forest green", "background_rgb": "rgb(34, 139, 34)"}
+{"color_name": "Green", "background_rgb": "rgb(0, 255, 0)"}
+{"color_name": "Green Yellow", "background_rgb": "rgb(173, 255, 47)"}
+{"color_name": "Harlequin", "background_rgb": "rgb(63, 255, 0)"}
+{"color_name": "Honeydew", "background_rgb": "rgb(240, 255, 240)"}
+{"color_name": "Hooker's green", "background_rgb": "rgb(73, 121, 107)"}
+{"color_name": "Hunter green", "background_rgb": "rgb(53, 94, 59)"}
+{"color_name": "India green", "background_rgb": "rgb(19, 136, 8)"}
+{"color_name": "Jade", "background_rgb": "rgb(0, 168, 107)"}
+{"color_name": "Jungle green", "background_rgb": "rgb(41, 171, 135)"}
+{"color_name": "Kelly green", "background_rgb": "rgb(76, 187, 23)"}
+{"color_name": "Lawn green", "background_rgb": "rgb(124, 252, 0)"}
+{"color_name": "Light green", "background_rgb": "rgb(144, 238, 144)"}
+{"color_name": "Lime", "background_rgb": "rgb(192, 255, 0)"}
+{"color_name": "Lime green", "background_rgb": "rgb(50, 205, 50)"}
+{"color_name": "Malachite", "background_rgb": "rgb(11, 218, 81)"}
+{"color_name": "Mantis", "background_rgb": "rgb(116, 195, 101)"}
+{"color_name": "Midnight green", "background_rgb": "rgb(0, 73, 83)"}
+{"color_name": "Mint", "background_rgb": "rgb(62, 180, 137)"}
+{"color_name": "Moss green", "background_rgb": "rgb(138, 154, 91)"}
+{"color_name": "Myrtle green", "background_rgb": "rgb(49, 120, 115)"}
+{"color_name": "Neon green", "background_rgb": "rgb(57, 255, 20)"}
+{"color_name": "Office green", "background_rgb": "rgb(0, 128, 0)"}
+{"color_name": "Olivine", "background_rgb": "rgb(154, 185, 115)"}
+{"color_name": "Pakistan green", "background_rgb": "rgb(0, 64, 26)"}
+{"color_name": "Persian green", "background_rgb": "rgb(0, 166, 147)"}
+{"color_name": "Pigment green", "background_rgb": "rgb(0, 165, 80)"}
+{"color_name": "Pine green", "background_rgb": "rgb(1, 121, 111)"}
+{"color_name": "Pistachio", "background_rgb": "rgb(147, 197, 114)"}
+{"color_name": "Reseda green", "background_rgb": "rgb(108, 124, 89)"}
+{"color_name": "Robin egg blue", "background_rgb": "rgb(0, 204, 204)"}
+{"color_name": "Sage", "background_rgb": "rgb(188, 184, 138)"}
+{"color_name": "Screamin' green", "background_rgb": "rgb(118, 255, 122)"}
+{"color_name": "Sea green", "background_rgb": "rgb(46, 139, 87)"}
+{"color_name": "SGBUS green", "background_rgb": "rgb(85, 221, 51)"}
+{"color_name": "Shamrock green", "background_rgb": "rgb(0, 158, 96)"}
+{"color_name": "Spring bud", "background_rgb": "rgb(167, 252, 0)"}
+{"color_name": "Spring green", "background_rgb": "rgb(0, 255, 127)"}
+{"color_name": "Tea green", "background_rgb": "rgb(208, 240, 192)"}
+{"color_name": "Teal", "background_rgb": "rgb(0, 128, 128)"}
+{"color_name": "Turquoise", "background_rgb": "rgb(64, 224, 208)"}
+{"color_name": "Viridian", "background_rgb": "rgb(64, 130, 109)"}
+{"color_name": "Yellow Green", "background_rgb": "rgb(154, 205, 50)"}
+{"color_name": "Alice blue", "background_rgb": "rgb(240, 248, 255)"}
+{"color_name": "Aqua", "background_rgb": "rgb(15, 255, 255)"}
+{"color_name": "Aquamarine", "background_rgb": "rgb(127, 255, 212)"}
+{"color_name": "Azure", "background_rgb": "rgb(0, 127, 255)"}
+{"color_name": "Azure (web)", "background_rgb": "rgb(240, 255, 255)"}
+{"color_name": "Blue Green", "background_rgb": "rgb(13, 152, 186)"}
+{"color_name": "Capri", "background_rgb": "rgb(0, 191, 255)"}
+{"color_name": "Caribbean Current", "background_rgb": "rgb(0, 109, 111)"}
+{"color_name": "Celeste", "background_rgb": "rgb(178, 255, 255)"}
+{"color_name": "Cerulean", "background_rgb": "rgb(0, 123, 167)"}
+{"color_name": "Dark cyan", "background_rgb": "rgb(0, 139, 139)"}
+{"color_name": "Electric blue", "background_rgb": "rgb(125, 249, 255)"}
+{"color_name": "Fluorescent cyan", "background_rgb": "rgb(21, 244, 238)"}
+{"color_name": "Keppel", "background_rgb": "rgb(58, 176, 158)"}
+{"color_name": "Ice blue", "background_rgb": "rgb(153, 255, 255)"}
+{"color_name": "Light cyan", "background_rgb": "rgb(224, 255, 255)"}
+{"color_name": "Light sea green", "background_rgb": "rgb(32, 178, 170)"}
+{"color_name": "Mint green", "background_rgb": "rgb(223, 255, 253)"}
+{"color_name": "Moonstone", "background_rgb": "rgb(58, 168, 193)"}
+{"color_name": "Pacific cyan", "background_rgb": "rgb(28, 169, 201)"}
+{"color_name": "Process Cyan", "background_rgb": "rgb(0, 183, 235)"}
+{"color_name": "Skobeloff", "background_rgb": "rgb(0, 122, 116)"}
+{"color_name": "Tiffany Blue", "background_rgb": "rgb(129, 216, 208)"}
+{"color_name": "Verdigris", "background_rgb": "rgb(67, 179, 174)"}
+{"color_name": "Vivid sky blue", "background_rgb": "rgb(0, 204, 255)"}
+{"color_name": "Zomp", "background_rgb": "rgb(57, 167, 141)"}
+{"color_name": "Aero", "background_rgb": "rgb(0, 185, 232)"}
+{"color_name": "Air Force blue", "background_rgb": "rgb(93, 138, 168)"}
+{"color_name": "Air superiority blue", "background_rgb": "rgb(114, 160, 193)"}
+{"color_name": "Argentinian Blue", "background_rgb": "rgb(108, 180, 238)"}
+{"color_name": "Azul", "background_rgb": "rgb(0, 112, 187)"}
+{"color_name": "Baby blue", "background_rgb": "rgb(137, 207, 240)"}
+{"color_name": "Berkeley Blue", "background_rgb": "rgb(0, 50, 98)"}
+{"color_name": "Bice blue", "background_rgb": "rgb(32, 114, 175)"}
+{"color_name": "Bleu de France", "background_rgb": "rgb(49, 140, 231)"}
+{"color_name": "Blue", "background_rgb": "rgb(0, 0, 255)"}
+{"color_name": "Blue Gray", "background_rgb": "rgb(102, 153, 204)"}
+{"color_name": "Bondi blue", "background_rgb": "rgb(0, 149, 182)"}
+{"color_name": "Brandeis blue", "background_rgb": "rgb(0, 112, 255)"}
+{"color_name": "Byzantine blue", "background_rgb": "rgb(52, 87, 213)"}
+{"color_name": "Cambridge blue", "background_rgb": "rgb(133, 176, 154)"}
+{"color_name": "Carolina blue", "background_rgb": "rgb(123, 175, 212)"}
+{"color_name": "Celestial Blue", "background_rgb": "rgb(73, 151, 208)"}
+{"color_name": "Celtic Blue", "background_rgb": "rgb(36, 107, 206)"}
+{"color_name": "Chefchaouen Blue", "background_rgb": "rgb(70, 143, 234)"}
+{"color_name": "Chrysler blue", "background_rgb": "rgb(59, 0, 219)"}
+{"color_name": "Cobalt blue", "background_rgb": "rgb(0, 71, 171)"}
+{"color_name": "Columbia blue", "background_rgb": "rgb(185, 217, 235)"}
+{"color_name": "Cornflower blue", "background_rgb": "rgb(100, 149, 237)"}
+{"color_name": "Blue (Crayola)", "background_rgb": "rgb(31, 117, 254)"}
+{"color_name": "Dark blue", "background_rgb": "rgb(0, 0, 184)"}
+{"color_name": "Delft Blue", "background_rgb": "rgb(31, 48, 94)"}
+{"color_name": "Denim", "background_rgb": "rgb(21, 96, 189)"}
+{"color_name": "Dodger blue", "background_rgb": "rgb(30, 144, 255)"}
+{"color_name": "Duke blue", "background_rgb": "rgb(0, 0, 156)"}
+{"color_name": "Egyptian blue", "background_rgb": "rgb(16, 52, 166)"}
+{"color_name": "Federal blue", "background_rgb": "rgb(22, 22, 107)"}
+{"color_name": "Glaucous", "background_rgb": "rgb(96, 130, 182)"}
+{"color_name": "Green Blue", "background_rgb": "rgb(17, 100, 180)"}
+{"color_name": "Electric indigo", "background_rgb": "rgb(111, 0, 255)"}
+{"color_name": "French Blue", "background_rgb": "rgb(0, 114, 187)"}
+{"color_name": "Indigo", "background_rgb": "rgb(75, 0, 130)"}
+{"color_name": "Indigo dye", "background_rgb": "rgb(0, 65, 106)"}
+{"color_name": "International Klein Blue", "background_rgb": "rgb(0, 47, 167)"}
+{"color_name": "Jordy Blue", "background_rgb": "rgb(138, 185, 241)"}
+{"color_name": "Lapis Lazuli", "background_rgb": "rgb(38, 97, 156)"}
+{"color_name": "Light blue", "background_rgb": "rgb(173, 216, 230)"}
+{"color_name": "Light Sky Blue", "background_rgb": "rgb(135, 206, 250)"}
+{"color_name": "Majorelle Blue", "background_rgb": "rgb(96, 80, 220)"}
+{"color_name": "Marian blue", "background_rgb": "rgb(43, 69, 147)"}
+{"color_name": "Maya blue", "background_rgb": "rgb(115, 194, 251)"}
+{"color_name": "Medium blue", "background_rgb": "rgb(0, 0, 205)"}
+{"color_name": "Medium slate blue", "background_rgb": "rgb(123, 104, 238)"}
+{"color_name": "Midnight blue", "background_rgb": "rgb(25, 25, 112)"}
+{"color_name": "Blue (Munsell)", "background_rgb": "rgb(0, 147, 175)"}
+{"color_name": "Navy blue", "background_rgb": "rgb(0, 0, 128)"}
+{"color_name": "Blue (NCS)", "background_rgb": "rgb(0, 135, 189)"}
+{"color_name": "Neon blue", "background_rgb": "rgb(70, 102, 255)"}
+{"color_name": "Non Photo blue", "background_rgb": "rgb(164, 221, 237)"}
+{"color_name": "Oxford Blue", "background_rgb": "rgb(0, 33, 71)"}
+{"color_name": "Palatinate blue", "background_rgb": "rgb(39, 59, 226)"}
+{"color_name": "Pale azure", "background_rgb": "rgb(135, 211, 248)"}
+{"color_name": "Penn Blue", "background_rgb": "rgb(1, 31, 91)"}
+{"color_name": "Periwinkle", "background_rgb": "rgb(204, 204, 255)"}
+{"color_name": "Persian blue", "background_rgb": "rgb(28, 57, 187)"}
+{"color_name": "Phthalo blue", "background_rgb": "rgb(0, 15, 137)"}
+{"color_name": "Picton Blue", "background_rgb": "rgb(69, 177, 232)"}
+{"color_name": "Polynesian blue", "background_rgb": "rgb(34, 76, 152)"}
+{"color_name": "Powder blue", "background_rgb": "rgb(158, 185, 212)"}
+{"color_name": "Prussian blue", "background_rgb": "rgb(0, 49, 83)"}
+{"color_name": "Resolution Blue", "background_rgb": "rgb(0, 35, 135)"}
+{"color_name": "RISD Blue", "background_rgb": "rgb(36, 84, 255)"}
+{"color_name": "Royal Blue (web color)", "background_rgb": "rgb(65, 105, 225)"}
+{"color_name": "Royal blue (traditional)", "background_rgb": "rgb(0, 35, 102)"}
+{"color_name": "Ruddy Blue", "background_rgb": "rgb(118, 171, 223)"}
+{"color_name": "Sapphire", "background_rgb": "rgb(15, 82, 186)"}
+{"color_name": "Honolulu Blue", "background_rgb": "rgb(0, 118, 182)"}
+{"color_name": "Savoy blue", "background_rgb": "rgb(75, 97, 209)"}
+{"color_name": "Silver Lake Blue", "background_rgb": "rgb(93, 137, 186)"}
+{"color_name": "Sky blue", "background_rgb": "rgb(135, 206, 235)"}
+{"color_name": "Space cadet", "background_rgb": "rgb(30, 41, 82)"}
+{"color_name": "Steel blue", "background_rgb": "rgb(70, 130, 180)"}
+{"color_name": "Tang Blue", "background_rgb": "rgb(0, 89, 207)"}
+{"color_name": "True Blue", "background_rgb": "rgb(45, 104, 196)"}
+{"color_name": "Tufts Blue", "background_rgb": "rgb(62, 142, 222)"}
+{"color_name": "UCLA Blue", "background_rgb": "rgb(39, 116, 174)"}
+{"color_name": "Ultramarine", "background_rgb": "rgb(18, 10, 143)"}
+{"color_name": "United Nations Blue", "background_rgb": "rgb(75, 146, 219)"}
+{"color_name": "Uranian Blue", "background_rgb": "rgb(175, 219, 245)"}
+{"color_name": "Violet Blue", "background_rgb": "rgb(50, 74, 178)"}
+{"color_name": "Vista Blue", "background_rgb": "rgb(124, 158, 217)"}
+{"color_name": "Yale Blue", "background_rgb": "rgb(0, 53, 107)"}
+{"color_name": "YInMn Blue", "background_rgb": "rgb(46, 80, 144)"}
+{"color_name": "Zaffre", "background_rgb": "rgb(0, 20, 168)"}
+{"color_name": "African violet", "background_rgb": "rgb(178, 132, 190)"}
+{"color_name": "Amethyst", "background_rgb": "rgb(153, 102, 204)"}
+{"color_name": "Blue Violet", "background_rgb": "rgb(138, 43, 226)"}
+{"color_name": "Byzantium", "background_rgb": "rgb(112, 41, 99)"}
+{"color_name": "Chinese violet", "background_rgb": "rgb(133, 96, 136)"}
+{"color_name": "Dark purple", "background_rgb": "rgb(48, 25, 52)"}
+{"color_name": "Dark violet", "background_rgb": "rgb(148, 0, 211)"}
+{"color_name": "Eggplant", "background_rgb": "rgb(97, 64, 81)"}
+{"color_name": "Electric purple", "background_rgb": "rgb(191, 0, 255)"}
+{"color_name": "Electric violet", "background_rgb": "rgb(143, 0, 255)"}
+{"color_name": "English violet", "background_rgb": "rgb(86, 60, 92)"}
+{"color_name": "Eminence", "background_rgb": "rgb(108, 48, 130)"}
+{"color_name": "Fairy Tale", "background_rgb": "rgb(242, 193, 209)"}
+{"color_name": "Fandango", "background_rgb": "rgb(181, 51, 137)"}
+{"color_name": "French mauve", "background_rgb": "rgb(212, 115, 212)"}
+{"color_name": "French violet", "background_rgb": "rgb(136, 6, 206)"}
+{"color_name": "Fuchsia", "background_rgb": "rgb(255, 0, 255)"}
+{"color_name": "Grape", "background_rgb": "rgb(111, 45, 168)"}
+{"color_name": "Heliotrope", "background_rgb": "rgb(223, 115, 255)"}
+{"color_name": "Iris", "background_rgb": "rgb(90, 79, 207)"}
+{"color_name": "Japanese violet", "background_rgb": "rgb(91, 50, 86)"}
+{"color_name": "Lavender blush", "background_rgb": "rgb(255, 240, 245)"}
+{"color_name": "Lavender (floral)", "background_rgb": "rgb(181, 126, 220)"}
+{"color_name": "Lavender (web)", "background_rgb": "rgb(230, 230, 250)"}
+{"color_name": "Lilac", "background_rgb": "rgb(200, 162, 200)"}
+{"color_name": "Mardi Gras", "background_rgb": "rgb(136, 0, 133)"}
+{"color_name": "Mauve", "background_rgb": "rgb(224, 176, 255)"}
+{"color_name": "Mauveine", "background_rgb": "rgb(141, 2, 155)"}
+{"color_name": "Mountbatten pink", "background_rgb": "rgb(153, 122, 141)"}
+{"color_name": "Mulberry", "background_rgb": "rgb(197, 75, 140)"}
+{"color_name": "Murrey", "background_rgb": "rgb(139, 0, 75)"}
+{"color_name": "Orchid", "background_rgb": "rgb(218, 112, 214)"}
+{"color_name": "Palatinate", "background_rgb": "rgb(104, 40, 96)"}
+{"color_name": "Pale purple", "background_rgb": "rgb(250, 230, 250)"}
+{"color_name": "Persian indigo", "background_rgb": "rgb(50, 18, 122)"}
+{"color_name": "Phlox", "background_rgb": "rgb(223, 0, 255)"}
+{"color_name": "Pink lavender", "background_rgb": "rgb(219, 178, 209)"}
+{"color_name": "Plum (web)", "background_rgb": "rgb(221, 160, 221)"}
+{"color_name": "Pomp and Power", "background_rgb": "rgb(134, 96, 142)"}
+{"color_name": "Puce", "background_rgb": "rgb(204, 136, 153)"}
+{"color_name": "Purple", "background_rgb": "rgb(128, 0, 128)"}
+{"color_name": "Purpureus", "background_rgb": "rgb(154, 78, 174)"}
+{"color_name": "Rebecca purple", "background_rgb": "rgb(102, 51, 153)"}
+{"color_name": "Royal purple", "background_rgb": "rgb(120, 81, 169)"}
+{"color_name": "Red Violet", "background_rgb": "rgb(199, 21, 133)"}
+{"color_name": "Russian violet", "background_rgb": "rgb(50, 23, 77)"}
+{"color_name": "Slate blue", "background_rgb": "rgb(106, 90, 205)"}
+{"color_name": "Steel pink", "background_rgb": "rgb(204, 51, 204)"}
+{"color_name": "Tekhelet", "background_rgb": "rgb(81, 40, 136)"}
+{"color_name": "Thistle", "background_rgb": "rgb(216, 191, 216)"}
+{"color_name": "Tropical indigo", "background_rgb": "rgb(150, 131, 236)"}
+{"color_name": "Tyrian purple", "background_rgb": "rgb(102, 2, 60)"}
+{"color_name": "Ultra Violet", "background_rgb": "rgb(100, 83, 148)"}
+{"color_name": "Veronica", "background_rgb": "rgb(160, 32, 240)"}
+{"color_name": "Violet", "background_rgb": "rgb(128, 0, 255)"}
+{"color_name": "Wisteria", "background_rgb": "rgb(201, 160, 220)"}
+{"color_name": "Amaranth", "background_rgb": "rgb(229, 43, 80)"}
+{"color_name": "Baker-Miller Pink", "background_rgb": "rgb(255, 145, 175)"}
+{"color_name": "Dark Magenta", "background_rgb": "rgb(139, 0, 139)"}
+{"color_name": "Finn", "background_rgb": "rgb(104, 48, 104)"}
+{"color_name": "Hot magenta", "background_rgb": "rgb(255, 29, 206)"}
+{"color_name": "Magenta dye", "background_rgb": "rgb(202, 31, 123)"}
+{"color_name": "Magenta (CMYK)", "background_rgb": "rgb(255, 0, 144)"}
+{"color_name": "Magenta (Crayola)", "background_rgb": "rgb(246, 83, 166)"}
+{"color_name": "Magenta (Pantone)", "background_rgb": "rgb(208, 65, 126)"}
+{"color_name": "Magenta haze", "background_rgb": "rgb(159, 69, 118)"}
+{"color_name": "Plum", "background_rgb": "rgb(142, 69, 133)"}
+{"color_name": "Purple pizzazz", "background_rgb": "rgb(254, 78, 218)"}
+{"color_name": "Quinacridone magenta", "background_rgb": "rgb(142, 58, 89)"}
+{"color_name": "Raspberry", "background_rgb": "rgb(227, 11, 92)"}
+{"color_name": "Razzle dazzle rose", "background_rgb": "rgb(255, 51, 204)"}
+{"color_name": "Rose pink", "background_rgb": "rgb(255, 102, 204)"}
+{"color_name": "Rose quartz", "background_rgb": "rgb(170, 152, 169)"}
+{"color_name": "Shocking pink", "background_rgb": "rgb(252, 15, 192)"}
+{"color_name": "Shocking pink (Crayola)", "background_rgb": "rgb(255, 111, 255)"}
+{"color_name": "Sky magenta", "background_rgb": "rgb(207, 113, 175)"}
+{"color_name": "Telemagenta", "background_rgb": "rgb(207, 52, 118)"}
+{"color_name": "Violet (web color)", "background_rgb": "rgb(238, 130, 238)"}
+{"color_name": "Amaranth pink", "background_rgb": "rgb(241, 156, 187)"}
+{"color_name": "Blush", "background_rgb": "rgb(222, 93, 131)"}
+{"color_name": "Carnation pink", "background_rgb": "rgb(255, 166, 201)"}
+{"color_name": "Champagne pink", "background_rgb": "rgb(241, 221, 207)"}
+{"color_name": "Cherry blossom pink", "background_rgb": "rgb(255, 183, 197)"}
+{"color_name": "China rose", "background_rgb": "rgb(168, 81, 110)"}
+{"color_name": "Cyclamen", "background_rgb": "rgb(245, 111, 161)"}
+{"color_name": "Deep pink", "background_rgb": "rgb(255, 20, 147)"}
+{"color_name": "Dogwood rose", "background_rgb": "rgb(215, 24, 104)"}
+{"color_name": "French rose", "background_rgb": "rgb(246, 74, 138)"}
+{"color_name": "Fuchsia rose", "background_rgb": "rgb(199, 67, 117)"}
+{"color_name": "Hollywood cerise", "background_rgb": "rgb(244, 0, 161)"}
+{"color_name": "Hot magenta", "background_rgb": "rgb(255, 0, 204)"}
+{"color_name": "Hot pink", "background_rgb": "rgb(255, 105, 180)"}
+{"color_name": "Lavender pink", "background_rgb": "rgb(251, 174, 210)"}
+{"color_name": "Mexican pink", "background_rgb": "rgb(228, 0, 124)"}
+{"color_name": "Mimi Pink", "background_rgb": "rgb(255, 218, 233)"}
+{"color_name": "Orchid pink", "background_rgb": "rgb(242, 189, 205)"}
+{"color_name": "Pale Dogwood", "background_rgb": "rgb(237, 205, 194)"}
+{"color_name": "Peach", "background_rgb": "rgb(255, 203, 164)"}
+{"color_name": "Persian rose", "background_rgb": "rgb(254, 40, 162)"}
+{"color_name": "Persian pink", "background_rgb": "rgb(247, 127, 190)"}
+{"color_name": "Rose Pompadour", "background_rgb": "rgb(237, 122, 155)"}
+{"color_name": "Razzmatazz", "background_rgb": "rgb(227, 37, 107)"}
+{"color_name": "Raspberry rose", "background_rgb": "rgb(179, 68, 108)"}
+{"color_name": "Rose Bonbon", "background_rgb": "rgb(249, 66, 158)"}
+{"color_name": "Seashell", "background_rgb": "rgb(255, 245, 238)"}
+{"color_name": "Tickle me pink", "background_rgb": "rgb(252, 137, 172)"}
+{"color_name": "Thulian pink", "background_rgb": "rgb(222, 111, 161)"}
+{"color_name": "Alabaster", "background_rgb": "rgb(237, 234, 224)"}
+{"color_name": "Anti-flash white", "background_rgb": "rgb(242, 243, 244)"}
+{"color_name": "Antique white", "background_rgb": "rgb(250, 235, 215)"}
+{"color_name": "Baby powder", "background_rgb": "rgb(254, 254, 250)"}
+{"color_name": "Cornsilk", "background_rgb": "rgb(255, 248, 220)"}
+{"color_name": "Dutch white", "background_rgb": "rgb(239, 223, 187)"}
+{"color_name": "Eggshell", "background_rgb": "rgb(240, 234, 214)"}
+{"color_name": "Floral white", "background_rgb": "rgb(255, 250, 240)"}
+{"color_name": "Ghost white", "background_rgb": "rgb(248, 248, 255)"}
+{"color_name": "Isabelline", "background_rgb": "rgb(244, 240, 236)"}
+{"color_name": "Linen", "background_rgb": "rgb(250, 240, 230)"}
+{"color_name": "Magnolia", "background_rgb": "rgb(248, 244, 255)"}
+{"color_name": "Mint cream", "background_rgb": "rgb(245, 255, 250)"}
+{"color_name": "Nyanza", "background_rgb": "rgb(233, 255, 219)"}
+{"color_name": "Old lace", "background_rgb": "rgb(253, 245, 230)"}
+{"color_name": "Parchment", "background_rgb": "rgb(241, 233, 210)"}
+{"color_name": "Pearl", "background_rgb": "rgb(234, 224, 200)"}
+{"color_name": "Platinum", "background_rgb": "rgb(229, 228, 226)"}
+{"color_name": "Seasalt", "background_rgb": "rgb(247, 247, 247)"}
+{"color_name": "Snow", "background_rgb": "rgb(255, 250, 250)"}
+{"color_name": "White", "background_rgb": "rgb(255, 255, 255)"}
+{"color_name": "White smoke", "background_rgb": "rgb(245, 245, 245)"}
+{"color_name": "Timberwolf", "background_rgb": "rgb(219, 215, 210)"}
+{"color_name": "Silver", "background_rgb": "rgb(192, 192, 192)"}
+{"color_name": "French gray", "background_rgb": "rgb(190, 191, 197)"}
+{"color_name": "Ash gray", "background_rgb": "rgb(178, 190, 181)"}
+{"color_name": "Cinereous", "background_rgb": "rgb(152, 129, 123)"}
+{"color_name": "Cadet gray", "background_rgb": "rgb(145, 163, 176)"}
+{"color_name": "Cool gray", "background_rgb": "rgb(140, 146, 172)"}
+{"color_name": "Taupe gray", "background_rgb": "rgb(139, 133, 137)"}
+{"color_name": "Battleship gray", "background_rgb": "rgb(132, 132, 130)"}
+{"color_name": "Gray", "background_rgb": "rgb(128, 128, 128)"}
+{"color_name": "Slate gray", "background_rgb": "rgb(112, 128, 144)"}
+{"color_name": "Dim gray", "background_rgb": "rgb(105, 105, 105)"}
+{"color_name": "Davy's gray", "background_rgb": "rgb(85, 85, 85)"}
+{"color_name": "Payne's gray", "background_rgb": "rgb(83, 104, 120)"}
+{"color_name": "Gunmetal", "background_rgb": "rgb(42, 52, 57)"}
+{"color_name": "Feldgrau", "background_rgb": "rgb(77, 93, 83)"}
+{"color_name": "Dark slate gray", "background_rgb": "rgb(47, 79, 79)"}
+{"color_name": "Black", "background_rgb": "rgb(0, 0, 0)"}
+{"color_name": "Caf\u00e9 noir", "background_rgb": "rgb(75, 54, 33)"}
+{"color_name": "Charcoal", "background_rgb": "rgb(54, 69, 79)"}
+{"color_name": "Ebony", "background_rgb": "rgb(85, 93, 80)"}
+{"color_name": "Eerie black", "background_rgb": "rgb(27, 27, 27)"}
+{"color_name": "Jet", "background_rgb": "rgb(52, 52, 52)"}
+{"color_name": "Licorice", "background_rgb": "rgb(26, 17, 16)"}
+{"color_name": "Night", "background_rgb": "rgb(17, 17, 17)"}
+{"color_name": "Onyx", "background_rgb": "rgb(53, 56, 57)"}
+{"color_name": "Outer space", "background_rgb": "rgb(65, 74, 76)"}
+{"color_name": "Raisin black", "background_rgb": "rgb(36, 33, 36)"}
+{"color_name": "Rich black", "background_rgb": "rgb(1, 11, 19)"}
+{"color_name": "Smoky black", "background_rgb": "rgb(16, 12, 8)"}
