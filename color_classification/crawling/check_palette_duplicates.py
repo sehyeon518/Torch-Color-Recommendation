@@ -1,3 +1,5 @@
+# adobe에서 추출한 색상 palette의 중복 검사
+
 import json
 
 jsonl_file_path = "/home/sehyeon/Documents/Favorfit-Color-Recommendation/color_classification/jsonl/five_colors_palette.jsonl"
