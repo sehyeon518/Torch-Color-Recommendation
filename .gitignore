@@ -3,3 +3,4 @@
 *.yaml
 *.log
 *.wandb
+color_classification/Classification/wandb
