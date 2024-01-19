@@ -3,8 +3,8 @@ import pandas as pd
 from datasets import load_dataset
 import torch
 
-_VERSION = datasets.Version("0.0.1")
-METADATA_PATH = r"/home/sehyeon/Documents/Favorfit-Color-Recommendation/color_classification/jsonl/quantized_product_colors_4to1.jsonl"
+_VERSION = datasets.Version("1.0.1")
+METADATA_PATH = r"C:\Users\mlfav\lib\shlee\Favorfit-Color-Recommendation\color_classification\jsonl\train.jsonl"
 _DEFAULT_CONFIG = datasets.BuilderConfig(name="default", version=_VERSION)
 
 class Classification(datasets.GeneratorBasedBuilder):
@@ -16,8 +16,8 @@ class Classification(datasets.GeneratorBasedBuilder):
             description="temp",
             features=datasets.Features(
                 {
-                    "input_colors": datasets.features.Sequence(datasets.features.Value("float32")),
-                    "output_color": datasets.features.Sequence(datasets.features.Value("float32")),
+                    "input_data": datasets.features.Sequence(datasets.features.Value("float32")),
+                    "output_color": datasets.features.Value("float32"),
                 }
             ),
         )
@@ -34,16 +34,16 @@ class Classification(datasets.GeneratorBasedBuilder):
         data_list = pd.read_json(data_list, lines=True)
         
         for idx, data in data_list.iterrows():
-            input_colors = data["obj_colors"]
-            output_color = data["bg_color"]
+            input_data = data["input_data"]
+            output_color = data["output_color"]
 
             yield idx, {
-                "input_colors": torch.flatten(torch.tensor(input_colors, dtype=torch.int32)),
-                "output_color": torch.flatten(torch.tensor(output_color, dtype=torch.int32)),
+                "input_data": torch.flatten(torch.tensor(input_data, dtype=torch.float32)),
+                "output_color": torch.tensor(output_color, dtype=torch.float32),
             }
 
 if __name__ == "__main__":
-    dataset = load_dataset(path=r"/home/sehyeon/Documents/Favorfit-Color-Recommendation/color_classification/Classification")
+    dataset = load_dataset(path=r"C:\Users\mlfav\lib\shlee\Favorfit-Color-Recommendation\color_classification\Classification")
     dataset = dataset["train"]
     print(dataset.shape)
     print(dataset[0])
