@@ -3,7 +3,7 @@ import pandas as pd
 from datasets import load_dataset
 import torch
 
-_VERSION = datasets.Version("1.0.1")
+_VERSION = datasets.Version("1.1.1")
 METADATA_PATH = r"C:\Users\mlfav\lib\shlee\Favorfit-Color-Recommendation\color_classification\jsonl\train.jsonl"
 _DEFAULT_CONFIG = datasets.BuilderConfig(name="default", version=_VERSION)
 
