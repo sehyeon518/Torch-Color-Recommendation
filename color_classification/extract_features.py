@@ -143,14 +143,16 @@ def calculate_gradient(hue_values):
     return np.round(hue_gradient, 3).tolist()
 
 
+count_tmp = 0
+
 for data in list_of_colors_data:
     palette = data['obj_colors'] # [[r, g, b], [r, g, b], [r, g, b], [r, g, b]]
     bg_number = data['bg_color'] # 
 
-    # 데이터가 너무 많으면 학습 데이터에 더이상 추가하지 않음
-    if count[bg_number] >= 400:
-        continue
-    count[bg_number] += 1
+    # # 데이터가 너무 많으면 학습 데이터에 더이상 추가하지 않음
+    # if count[bg_number] >= 400:
+    #     continue
+    # count[bg_number] += 1
 
     palette_RGB = []
     palette_HSV = []
@@ -195,7 +197,7 @@ for data in list_of_colors_data:
         json.dump(data, new_file)
         new_file.write('\n')
 
-    count_tmp = sum(count)
+    count_tmp += 1
     if count_tmp % 1000 == 0:
         print(count_tmp)
 
