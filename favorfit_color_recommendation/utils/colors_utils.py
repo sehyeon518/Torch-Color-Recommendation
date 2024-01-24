@@ -7,6 +7,7 @@ import matplotlib.colors as mcolors
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
+
 # extract 4 colors
 def extract_colors(image_path):
     color_thief = ColorThief(image_path)
@@ -95,7 +96,14 @@ def calculate_statistics(channel):
     max_value = np.max(channel)
     min_value = np.min(channel)
     maxmin_diff = np.max(channel) - np.min(channel)
-    return [round(mean_value, 3), round(stddev_value, 3), round(median_value, 3), round(max_value, 3), round(min_value, 3), round(maxmin_diff, 3)]
+    return [
+        round(mean_value, 3),
+        round(stddev_value, 3),
+        round(median_value, 3),
+        round(max_value, 3),
+        round(min_value, 3),
+        round(maxmin_diff, 3),
+    ]
 
 
 # Calculate Hue probability
@@ -133,9 +141,17 @@ def calculate_CH_values(L1, C1, H1, L2, C2, H2):
 
     # Calculate HH
     EC = 0.5 + 0.5 * np.tanh(-2 + 0.5 * C1)
-    HS = -0.08 - 0.14 * np.sin(np.radians(H1) + np.radians(50)) - 0.07 * np.sin(np.radians(2 * H1) + np.radians(90))
+    HS = (
+        -0.08
+        - 0.14 * np.sin(np.radians(H1) + np.radians(50))
+        - 0.07 * np.sin(np.radians(2 * H1) + np.radians(90))
+    )
     HSY1 = EC * (HS + L1)
-    HS = -0.08 - 0.14 * np.sin(np.radians(H2) + np.radians(50)) - 0.07 * np.sin(np.radians(2 * H2) + np.radians(90))
+    HS = (
+        -0.08
+        - 0.14 * np.sin(np.radians(H2) + np.radians(50))
+        - 0.07 * np.sin(np.radians(2 * H2) + np.radians(90))
+    )
     HSY2 = EC * (HS + L2)
     HH = HSY1 + HSY2
 
@@ -151,8 +167,14 @@ def calculate_CH(palette):
     for color1, color2 in itertools.combinations(palette, 2):
         l1, a1, b1 = color1
         l2, a2, b2 = color2
-        result = calculate_CH_values(l1, np.sqrt(a1**2 + b1**2), np.degrees(np.arctan2(b1, a1)),
-                           l2, np.sqrt(a2**2 + b2**2), np.degrees(np.arctan2(b2, a2)))
+        result = calculate_CH_values(
+            l1,
+            np.sqrt(a1**2 + b1**2),
+            np.degrees(np.arctan2(b1, a1)),
+            l2,
+            np.sqrt(a2**2 + b2**2),
+            np.degrees(np.arctan2(b2, a2)),
+        )
         ch_values.append(result)
     return ch_values
 
@@ -176,36 +198,51 @@ def extract_features(rgb):
         palette_HSV.append([round(i, 3) for i in list(colorsys.rgb_to_hsv(*color))])
         palette_LAB.append([round(i, 3) for i in rgb_to_lab(*color)])
 
-    statistics_RGB_R = [calculate_statistics(np.array(palette_RGB)[:,0])]
-    statistics_RGB_G = [calculate_statistics(np.array(palette_RGB)[:,1])]
-    statistics_RGB_B = [calculate_statistics(np.array(palette_RGB)[:,2])]
-    statistics_HSV_H = [calculate_statistics(np.array(palette_HSV)[:,0])]
-    statistics_HSV_S = [calculate_statistics(np.array(palette_HSV)[:,1])]
-    statistics_HSV_V = [calculate_statistics(np.array(palette_HSV)[:,2])]
-    statistics_LAB_L = [calculate_statistics(np.array(palette_LAB)[:,0])]
-    statistics_LAB_A = [calculate_statistics(np.array(palette_LAB)[:,1])]
-    statistics_LAB_B = [calculate_statistics(np.array(palette_LAB)[:,2])]
+    statistics_RGB_R = [calculate_statistics(np.array(palette_RGB)[:, 0])]
+    statistics_RGB_G = [calculate_statistics(np.array(palette_RGB)[:, 1])]
+    statistics_RGB_B = [calculate_statistics(np.array(palette_RGB)[:, 2])]
+    statistics_HSV_H = [calculate_statistics(np.array(palette_HSV)[:, 0])]
+    statistics_HSV_S = [calculate_statistics(np.array(palette_HSV)[:, 1])]
+    statistics_HSV_V = [calculate_statistics(np.array(palette_HSV)[:, 2])]
+    statistics_LAB_L = [calculate_statistics(np.array(palette_LAB)[:, 0])]
+    statistics_LAB_A = [calculate_statistics(np.array(palette_LAB)[:, 1])]
+    statistics_LAB_B = [calculate_statistics(np.array(palette_LAB)[:, 2])]
 
-    hue_array = np.array(palette_HSV)[:,0]
+    hue_array = np.array(palette_HSV)[:, 0]
     hue_probabilities = calculate_hue_probability(hue_array)
     hue_entropy = [[calculate_hue_entropy(hue_array)]]
 
     ch_values = [calculate_CH(np.array(palette_LAB))]
     hue_gradient = [calculate_gradient(hue_array)]
-    light_gradient = [calculate_gradient(np.array(palette_LAB)[:,0])]
+    light_gradient = [calculate_gradient(np.array(palette_LAB)[:, 0])]
 
-    data = sum((palette_RGB, palette_HSV, palette_LAB,
-                statistics_RGB_R, statistics_RGB_G, statistics_RGB_B,
-                statistics_HSV_H, statistics_HSV_S, statistics_HSV_V,
-                statistics_LAB_L, statistics_LAB_A, statistics_LAB_B,
-                hue_probabilities, hue_entropy,
-                ch_values, hue_gradient, light_gradient), [])
+    data = sum(
+        (
+            palette_RGB,
+            palette_HSV,
+            palette_LAB,
+            statistics_RGB_R,
+            statistics_RGB_G,
+            statistics_RGB_B,
+            statistics_HSV_H,
+            statistics_HSV_S,
+            statistics_HSV_V,
+            statistics_LAB_L,
+            statistics_LAB_A,
+            statistics_LAB_B,
+            hue_probabilities,
+            hue_entropy,
+            ch_values,
+            hue_gradient,
+            light_gradient,
+        ),
+        [],
+    )
     data = sum(data, [])
     return data
 
 
 def extract_features_119(image_file, metadata_colors):
-
     # Open Image and Extract 4 colors
     input_palette = extract_colors(image_file)
 
@@ -219,65 +256,23 @@ def extract_features_119(image_file, metadata_colors):
 
 def color_filter_with_mask(img, mask, pixel_skip):
     if mask.all() == None:
-        mask = np.ones_like(img[:,:,0])
+        mask = np.ones_like(img[:, :, 0])
     if len(mask.shape) == 3:
-        mask = mask[:,:,0]
+        mask = mask[:, :, 0]
     if len(np.unique(mask)) != 2:
-        mask = np.where(mask<127, 0, 1)
+        mask = np.where(mask < 127, 0, 1)
 
-    img_flat = img.reshape([-1,3])
+    img_flat = img.reshape([-1, 3])
     mask_flat = mask.flatten()
     img_flat = img_flat[np.where(mask_flat == 1)[0]]
-    random_row = np.random.choice(len(img_flat), size=len(img_flat)//pixel_skip, replace=True)
+    random_row = np.random.choice(
+        len(img_flat), size=len(img_flat) // pixel_skip, replace=True
+    )
 
-    return img_flat[random_row,:]
-
-
-def color_extraction(img, mask=None, n_cluster=4, epochs = 3, pixel_skip=10, per_round=None):
-    if mask is None:
-        mask = np.ones_like(img) * 255
-
-    img = color_filter_with_mask(img, mask, pixel_skip)
-
-    # selected_colors = random_selected_pixel_with_mask(img, mask, n_cluster)
-    if len(img) == 0:
-        print(np.unique(mask))
-    selected_colors = img[np.random.choice(range(len(img)), n_cluster)]
-    k_map = {idx:Centroid(color) for idx, color in enumerate(selected_colors)}
-
-    result = []
-    for epoch in range(epochs):
-        for color in img:
-            closest_k = np.argmin([k_map[k].get_dist(color) for k in range(n_cluster)])
-            k_map[closest_k].add_neighbor(color)
-
-        for k in range(n_cluster):
-            k_map[k].update_color()
-
-            if epoch == epochs-1:
-                color, num_pix = k_map[k].get_data()
-                result.append((color, num_pix/len(img)))
-            else:
-                k_map[k].clean_neighbor()
-
-    result = sorted(result, key=lambda x:x[1], reverse=True)
-
-    color_result = []
-    percentage = []
-    for cur in result:
-        color_result.append(cur[0])
-        if per_round is not None:
-            per = round(cur[1], per_round)
-        else:
-            per = cur[1]
-        percentage.append(per)
-
-    return [color_result, percentage]
+    return img_flat[random_row, :]
 
 
-
-def color_normalization(color_arr, scaling = True, type="rgb", only_scale=False):
-
+def color_normalization(color_arr, scaling=True, type="rgb", only_scale=False):
     color_arr = np.array(color_arr).astype(np.float32)
 
     if type == "rgb":
@@ -285,13 +280,13 @@ def color_normalization(color_arr, scaling = True, type="rgb", only_scale=False)
         std = np.array([0.229, 0.224, 0.225])
         scale = np.array([255.0, 255.0, 255.0])
     elif type == "hsv":
-        mean = np.array([0.314 , 0.3064, 0.553])
+        mean = np.array([0.314, 0.3064, 0.553])
         std = np.array([0.2173, 0.2056, 0.2211])
         scale = np.array([179.0, 255.0, 255.0])
-        
-    arr_shape_length = len(color_arr.shape)    
-    new_shape = [1]*arr_shape_length
-    new_shape[arr_shape_length-1] = -1
+
+    arr_shape_length = len(color_arr.shape)
+    new_shape = [1] * arr_shape_length
+    new_shape[arr_shape_length - 1] = -1
 
     mean = mean.reshape(new_shape)
     std = std.reshape(new_shape)
@@ -307,7 +302,8 @@ def color_normalization(color_arr, scaling = True, type="rgb", only_scale=False)
 
 
 def rgb_to_hex(rgb):
-    return '#%02x%02x%02x' % (int(rgb[0]), int(rgb[1]), int(rgb[2]))
+    return "#%02x%02x%02x" % (int(rgb[0]), int(rgb[1]), int(rgb[2]))
+
 
 def colors_to_hex(colors):
     colors = list(colors)
@@ -315,8 +311,8 @@ def colors_to_hex(colors):
 
 
 if __name__ == "__main__":
-    image_path = '/home/sehyeon/Downloads/unsplash.jpg'
-    list_of_colors_path = 'favorfit_color_recommendation/features/list_of_colors.jsonl'
+    image_path = "/home/sehyeon/Downloads/unsplash.jpg"
+    list_of_colors_path = "favorfit_color_recommendation/features/list_of_colors.jsonl"
     features_119 = extract_features_119(image_path, list_of_colors_path)
-    
+
     print(len(features_119))
