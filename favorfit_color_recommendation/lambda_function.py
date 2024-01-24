@@ -3,10 +3,6 @@ from io import BytesIO
 import json
 
 
-list_of_colors_path = "favorfit_color_recommendation/features/list_of_colors.jsonl"
-with open(list_of_colors_path, 'r') as file_path:
-    list_of_colors = [json.loads(line)['color_rgb'] for line in file_path]
-
 def respond(err, res):
     respond_msg = {
         "statusCode": 502 if err is not None else 200,
@@ -49,14 +45,17 @@ def lambda_handler(event, context):
     state = update_state("Get colors")
 
     from utils.colors_utils import extract_features_119
+    from utils.data_utils import load_colors_540
+    list_of_colors = load_colors_540()
     input_data = extract_features_119(image_file, list_of_colors)
 
     from models.inference import run
     probabilities_540 = run(input_data)
 
     from utils.data_utils import get_top_indices_and_probabilities
-    colors, weights = get_top_indices_and_probabilities(probabilities_540, list_of_colors)
-    
+    colors, weights = get_top_indices_and_probabilities(
+        probabilities_540, list_of_colors
+    )
     # get indices
 
     # convert RGB to hex

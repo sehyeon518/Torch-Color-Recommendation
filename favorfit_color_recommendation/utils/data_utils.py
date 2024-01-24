@@ -25,6 +25,19 @@ def get_top_indices_and_probabilities(output, list_of_colors, num_indices=4):
     return top_colors, sorted_probabilities
 
 
+def load_colors_540():
+    list_of_colors_path_pattern = "favorfit_color_recommendation/features/list_of_colors.jsonl"
+    list_of_colors = []
+
+    for file_path in glob(list_of_colors_path_pattern):
+        with open(file_path, "r") as file:
+            lines = file.readlines()
+            colors_from_file = [json.loads(line)["color_rgb"] for line in lines]
+            list_of_colors.extend(colors_from_file)
+
+    return list_of_colors
+
+
 def load_templates_features():
     id_arr, colors_arr, weights_arr = [], [], []
     
