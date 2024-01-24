@@ -230,6 +230,15 @@ def extract_features_119(image_file, list_of_colors_path):
     return input_data
 
 
+def rgb_to_hex(rgb):
+    return '#%02x%02x%02x' % (int(rgb[0]), int(rgb[1]), int(rgb[2]))
+
+
+def colors_to_hex(colors):
+    colors = list(colors)
+    return [rgb_to_hex(color) for color in colors]
+
+
 if __name__ == "__main__":
     image_path = '/home/sehyeon/Downloads/unsplash.jpg'
     list_of_colors_path = 'favorfit_color_recommendation/features/list_of_colors.jsonl'
