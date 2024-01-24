@@ -76,3 +76,24 @@ class ImageConverter:
                 raise AssertionError
 
         return latent_img
+    
+    def base64_to_image(self, base64_string):
+
+        data_start_index = base64_string.find(",") + 1
+        base64_data = base64_string[data_start_index:]
+        decoded_image = base64.b64decode(base64_data)
+
+        image_file = BytesIO(decoded_image)
+
+        return image_file
+
+    def np_to_image_without_saving(self, img_np):
+        img_pil = Image.fromarray(img_np)
+
+        img_bytes_io = BytesIO()
+        img_pil.save(img_bytes_io, format='PNG')
+        img_bytes_io.seek(0)
+
+        img_bytes = img_bytes_io.read()
+
+        return BytesIO(img_bytes)
