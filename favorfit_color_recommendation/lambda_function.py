@@ -69,11 +69,13 @@ def lambda_handler(event, context):
     indices = get_close_index(similarity, id_arr)
 
     # convert RGB to hex
+    from utils.colors_utils import colors_to_hex
+    state = update_state("Converting RGB to hex")
+    colors_hex = colors_to_hex(colors)
 
     # Respond
     state = update_state("Responding")
-    output = None
-    # output = {"colors": colors_hex, "id": indices}
+    output = {"colors": colors_hex, "id": indices}
 
     return respond(None, output)
 
