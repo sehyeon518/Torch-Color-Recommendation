@@ -22,7 +22,7 @@ def get_top_indices_and_probabilities(output, list_of_colors, num_indices=4):
 
     top_colors = np.array([list_of_colors[idx] for idx in top_indices[sorted_indices]])
 
-    return top_colors, sorted_probabilities
+    return top_colors, sorted_probabilities.reshape((1, num_indices))
 
 
 def load_colors_540():
@@ -43,7 +43,7 @@ def load_templates_features():
     
     total_json = []
 
-    fns = glob("./features/*.json")
+    fns = glob("favorfit_color_recommendation/features/*.json")
     for fn in fns:
         with open(fn, 'r') as rf:
             total_json.extend(json.load(rf))
