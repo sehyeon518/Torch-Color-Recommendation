@@ -11,20 +11,6 @@ def extract_colors(image_path):
     input_palette = [list(c) for c in input_palette]
     return input_palette
 
-# Load list of 540 colors meta data
-def load_metadata_from_file(file_path):
-    import json
-    metadata_colors = []
-
-    with open(file_path, 'r') as file:
-        for line in file:
-            color_data = json.loads(line)
-            rgb = color_data.get("color_rgb")
-            if rgb:
-                metadata_colors.append(rgb)
-
-    return np.array(metadata_colors)
-
 
 # Find the closest color in metadata for each input palette
 def find_closest_color(input_colors, metadata_colors):
