@@ -56,7 +56,17 @@ def lambda_handler(event, context):
     colors, weights = get_top_indices_and_probabilities(
         probabilities_540, list_of_colors
     )
+
+    # load background data
+    from utils.data_utils import load_templates_features
+    state = update_state("Loading background data")
+    id_arr, colors_arr, weights_arr = load_templates_features()
+
     # get indices
+    from utils.data_utils import calculate_cos_similarity, get_close_index, concat_array
+    state = update_state("Get indices")
+    similarity = calculate_cos_similarity(concat_array([colors.flatten()], weights*30, axis=1), concat_array(colors_arr, weights_arr*30, axis=1))
+    indices = get_close_index(similarity, id_arr)
 
     # convert RGB to hex
 
