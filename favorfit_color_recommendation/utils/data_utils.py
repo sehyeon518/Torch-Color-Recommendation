@@ -20,9 +20,22 @@ def get_top_indices_and_probabilities(output, list_of_colors, num_indices=4):
     sorted_indices = np.argsort(normalized_probabilities)[::-1]
     sorted_probabilities = normalized_probabilities[sorted_indices]
 
-    top_colors = [list_of_colors[idx] for idx in top_indices[sorted_indices]]
+    top_colors = np.array([list_of_colors[idx] for idx in top_indices[sorted_indices]])
 
-    return top_colors, sorted_probabilities
+    return top_colors, sorted_probabilities.reshape((1, num_indices))
+
+
+def load_colors_540():
+    list_of_colors_path_pattern = "favorfit_color_recommendation/features/list_of_colors.jsonl"
+    list_of_colors = []
+
+    for file_path in glob(list_of_colors_path_pattern):
+        with open(file_path, "r") as file:
+            lines = file.readlines()
+            colors_from_file = [json.loads(line)["color_rgb"] for line in lines]
+            list_of_colors.extend(colors_from_file)
+
+    return list_of_colors
 
 
 def load_templates_features():
@@ -30,7 +43,7 @@ def load_templates_features():
     
     total_json = []
 
-    fns = glob("./features/*.json")
+    fns = glob("favorfit_color_recommendation/features/*.json")
     for fn in fns:
         with open(fn, 'r') as rf:
             total_json.extend(json.load(rf))

@@ -215,15 +215,13 @@ def extract_features(rgb):
     return data
 
 
-def extract_features_119(image_file, list_of_colors_path):
+def extract_features_119(image_file, metadata_colors):
 
     # Open Image and Extract 4 colors
     input_palette = extract_colors(image_file)
 
     # Preprocess color data
-    metadata_colors = load_metadata_from_file(list_of_colors_path)
-    input_palette = find_closest_color(input_palette, metadata_colors)
-
+    input_palette = find_closest_color(input_palette, np.array(metadata_colors))
     # Extract 119 features
     input_data = extract_features(input_palette)
 

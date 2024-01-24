@@ -16,8 +16,6 @@ def relu(x):
 
 
 def forward(x, model_weights):
-    for key, value in model_weights.items():
-        print(f"Layer: {key}, Shape: {np.array(value).shape}")
     # Linear 1
     x = linear(
         x, model_weights["seq_modules.0.weight"], model_weights["seq_modules.0.bias"]
