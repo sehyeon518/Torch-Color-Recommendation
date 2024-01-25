@@ -2,6 +2,7 @@ from glob import glob
 import json
 import os
 import numpy as np
+import requests
 
 
 def get_top_4_colors(probability_arr):
@@ -27,7 +28,7 @@ def get_top_indices_and_probabilities(output, list_of_colors, num_indices=4):
 
 def load_colors_540():
     list_of_colors_path_pattern = (
-        "favorfit_color_recommendation/features/list_of_colors.jsonl"
+        "./features/list_of_colors.jsonl"
     )
     list_of_colors = []
 
@@ -41,19 +42,21 @@ def load_colors_540():
 
 
 def load_templates_features():
+    sample_num = -1
+    external_url = "https://dapi.favorfit.co.kr/studio/background_for_recommend"
+    params = {"sample_num": sample_num}
+
+    response = requests.get(external_url, json=params)
+
+    re = response.json()
+    data_list = [{"id": item["id"], "feature": eval(item["feature"])} for item in re]
+
     id_arr, colors_arr, weights_arr = [], [], []
 
-    total_json = []
-
-    fns = glob("favorfit_color_recommendation/features/*.json")
-    for fn in fns:
-        with open(fn, "r") as rf:
-            total_json.extend(json.load(rf))
-
-    for data in total_json:
+    for data in data_list:
         id_arr.append(data["id"])
-        colors_arr.append(np.array(data["colors"]).flatten())
-        weights_arr.append(np.array(data["weights"]).flatten())
+        colors_arr.append(np.array(data["feature"][0]).flatten())
+        weights_arr.append(np.array(data["feature"][1]).flatten())
 
     return np.array(id_arr), np.array(colors_arr), np.array(weights_arr)
 
@@ -84,14 +87,6 @@ def extract_euclidien_similarity(data_arr):
     np.fill_diagonal(similarities, 1)
 
     return similarities
-
-
-def get_template_dict():
-    template_paths = glob("/media/mlfavorfit/sdb/template/*/*.jpg")
-    template_dict = {
-        int(os.path.basename(path).split(".")[0]): path for path in template_paths
-    }
-    return template_dict
 
 
 def concat_array(arr1, arr2, axis=0):
