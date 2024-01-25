@@ -41,8 +41,8 @@ def load_colors_540():
     return list_of_colors
 
 
-def load_templates_features():
-    sample_num = -1
+def load_templates_features(sample_num = -1):
+    
     external_url = "https://dapi.favorfit.co.kr/studio/background_for_recommend"
     params = {"sample_num": sample_num}
 
