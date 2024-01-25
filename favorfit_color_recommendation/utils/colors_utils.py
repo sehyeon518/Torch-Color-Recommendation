@@ -1,11 +1,7 @@
 import colorsys
 import itertools
-from matplotlib import image as Image
 import numpy as np
 from colorthief import ColorThief
-import matplotlib.colors as mcolors
-import matplotlib.pyplot as plt
-from collections import defaultdict
 
 
 # extract 4 colors
