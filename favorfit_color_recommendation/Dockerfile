@@ -1,23 +1,21 @@
-FROM python:3.8
+ARG FUNCTION_DIR="/favorfit_color_template_recommend"
+ARG DEPS_DIR="/python_lib"
 
-WORKDIR /shlee
+FROM amazon/aws-lambda-python:3.9 as build-image
 
-RUN apt-get update && apt-get install -y \
-    libjpeg-dev \
-    zlib1g-dev
-    
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+ARG FUNCTION_DIR
+ARG DEPS_DIR
 
+ENV PYTHONPATH=${DEPS_DIR}:${PYTHONPATH}
 
-COPY ./lambda_function.py ./
-COPY ./features ./features
-COPY ./models/inference.py ./models/inference.py
-COPY ./models/model.py ./models/model.py
-COPY ./models/20240124.json ./models/20240124.json
-COPY ./features/ ./features/
-COPY ./utils/ ./utils/
+RUN mkdir -p ${FUNCTION_DIR}
+RUN mkdir -p ${DEPS_DIR}
+WORKDIR ${FUNCTION_DIR}
 
-ENTRYPOINT [ "python", "lambda_function.py" ]
+RUN yum -y update && yum -y install mesa-libGL glib2
 
-# RUN cp ./lambda_function.py /shlee/
+COPY ./ ${FUNCTION_DIR}
+
+RUN pip install --target ${DEPS_DIR} --no-cache-dir -r requirements.txt
+
+CMD ["lambda_function.lambda_handler"]
