@@ -5,7 +5,7 @@ from models.model import forward
 
 def run(input_data):
     # with open("favorfit_color_recommendation/models/weight_and_bias.json") as rg:
-    with open("./models/20240124.json") as rg:
+    with open("./models/20240129.json") as rg:
         model_weights = json.load(rg)
 
     for key in model_weights:

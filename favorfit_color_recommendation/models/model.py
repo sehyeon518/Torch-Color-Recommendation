@@ -40,34 +40,6 @@ def forward(x, model_weights):
     )
     x = relu(x)
 
-    # Linear 3
-    x = linear(
-        x, model_weights["seq_modules.6.weight"], model_weights["seq_modules.6.bias"]
-    )
-    # ResBlock 1
-    for i in range(1, 3):
-        weight, bias = (
-            model_weights[f"seq_modules.7.layer{i}.weight"],
-            model_weights[f"seq_modules.7.layer{i}.bias"],
-        )
-        x = linear(x, weight, bias)
-
-    # LayerNorm3
-    x = layer_norm(
-        x,
-        gamma=model_weights["seq_modules.8.weight"],
-        beta=model_weights["seq_modules.8.bias"],
-    )
-    x = relu(x)
-
-    # ResBlock 2
-    for i in range(1, 3):
-        weight, bias = (
-            model_weights[f"seq_modules.10.layer{i}.weight"],
-            model_weights[f"seq_modules.10.layer{i}.bias"],
-        )
-        x = linear(x, weight, bias)
-
     # Output Layer
     x = linear(x, model_weights["out.weight"], model_weights["out.bias"])
 

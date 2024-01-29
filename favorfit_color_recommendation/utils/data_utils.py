@@ -27,22 +27,18 @@ def get_top_indices_and_probabilities(output, list_of_colors, num_indices=4):
 
 
 def load_colors_540():
-    list_of_colors_path_pattern = (
-        "./features/list_of_colors.jsonl"
-    )
+    file_path = "./features/list_of_colors.jsonl"
     list_of_colors = []
 
-    for file_path in glob(list_of_colors_path_pattern):
-        with open(file_path, "r") as file:
-            lines = file.readlines()
-            colors_from_file = [json.loads(line)["color_rgb"] for line in lines]
-            list_of_colors.extend(colors_from_file)
+    with open(file_path, "r") as file:
+        lines = file.readlines()
+        colors_from_file = [json.loads(line)["color_rgb"] for line in lines]
+        list_of_colors.extend(colors_from_file)
 
     return list_of_colors
 
 
-def load_templates_features(sample_num = -1):
-    
+def load_templates_features(sample_num=-1):
     external_url = "https://dapi.favorfit.co.kr/studio/background_for_recommend"
     params = {"sample_num": sample_num}
 

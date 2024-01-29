@@ -22,11 +22,6 @@ class Classification(nn.Module):
             nn.Linear(512, 1024),
             nn.LayerNorm(1024),
             nn.ReLU(),
-            nn.Linear(1024, 1024),
-            ResBlock(1024, 2048),
-            nn.LayerNorm(1024),
-            nn.ReLU(),
-            ResBlock(1024, 2048)
         )
 
         self.out = nn.Linear(1024, 540)
