@@ -37,14 +37,14 @@ def lambda_handler(event, context):
 
     from utils.image_converter import ImageConverter
     img_converter = ImageConverter(mode="rgb")
-    image_np = img_converter.convert(img, astype="np", channel=3)
+    image_np = img_converter.convert(img, astype="np", channel=3, resize_shape=(128, 128))
     image_file = img_converter.base64_to_image(img)
 
     # load mask
     state = update_state("Loading mask")
     if "mask" in args:
         mask = args["mask"]
-        mask_np = img_converter.convert(mask, astype="np", channel=3)
+        mask_np = img_converter.convert(mask, astype="np", channel=3, resize_shape=(128, 128))
     else:
         print("Can not find mask in args")
         mask_np = None
