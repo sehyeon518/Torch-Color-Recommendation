@@ -42,7 +42,7 @@ def load_templates_features(response, sample_num=-1):
     # response = requests.get(external_url, json=params)
     # re = response.json()
 
-    data_list = eval(response)
+    data_list = eval(response) if isinstance(response, str) else response
 
     id_arr, colors_arr, weights_arr = [], [], []
 
