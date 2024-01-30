@@ -1,8 +1,5 @@
-from glob import glob
 import json
-import os
 import numpy as np
-import requests
 
 
 def get_top_4_colors(probability_arr):
@@ -38,21 +35,39 @@ def load_colors_540():
     return list_of_colors
 
 
-def load_templates_features(sample_num=-1):
-    external_url = "https://dapi.favorfit.co.kr/studio/background_for_recommend"
-    params = {"sample_num": sample_num}
+def load_templates_features(response, sample_num=-1):
+    # external_url = "https://dapi.favorfit.co.kr/studio/background_for_recommend"
+    # params = {"sample_num": sample_num}
 
-    response = requests.get(external_url, json=params)
+    # response = requests.get(external_url, json=params)
+    # re = response.json()
 
-    re = response.json()
-    data_list = [{"id": item["id"], "feature": eval(item["feature"])} for item in re]
+    data_list = eval(response)
 
     id_arr, colors_arr, weights_arr = [], [], []
 
     for data in data_list:
-        id_arr.append(data["id"])
-        colors_arr.append(np.array(data["feature"][0]).flatten())
-        weights_arr.append(np.array(data["feature"][1]).flatten())
+        idx = data["id"]
+        
+        feature = eval(data["feature"]) if isinstance(data["feature"], str) else data["feature"]
+        id_arr.append(idx)
+        colors_arr.append(np.array(feature[0]).flatten())
+        weights_arr.append(np.array(feature[1]).flatten())
+
+    # id_arr, colors_arr, weights_arr = [], [], []
+    
+    # total_json = []
+
+    # fns = glob("./features/*.json")
+    # for fn in fns:
+    #     with open(fn, 'r') as rf:
+    #         total_json.extend(json.load(rf))
+    
+    # for data in total_json:
+    #     id_arr.append(data['id'])
+    #     colors_arr.append(np.array(data['colors']).flatten())
+    #     weights_arr.append(np.array(data['weights']).flatten())
+    
 
     return np.array(id_arr), np.array(colors_arr), np.array(weights_arr)
 
