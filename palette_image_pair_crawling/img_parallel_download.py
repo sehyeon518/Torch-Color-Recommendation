@@ -10,8 +10,8 @@ image_folder_path = r"E:\palette_and_images\Image\\"
 color_folder_path = r"E:\palette_and_images\Palette\\"
 
 
-def color_numpy(rgb, shape):
-    total_width, total_height = shape
+def color_numpy(rgb):
+    total_width, total_height = 512, 512
 
     repeat_count = total_width // len(rgb)
 
@@ -27,22 +27,43 @@ def color_numpy(rgb, shape):
     return color_image.astype(np.uint8)
 
 
+def crop_to_square(image):
+    height, width = image.shape[:2]
+
+    min_dim = min(height, width)
+
+    start_h = (height - min_dim) // 2
+    end_h = start_h + min_dim
+    start_w = (width - min_dim) // 2
+    end_w = start_w + min_dim
+
+    cropped_image = image[start_h:end_h, start_w:end_w]
+
+    return cropped_image
+
+img_counter = 0
+
 def download_image(url, color, img_number):
+    global img_counter
+
     try:
         request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
         img_url = urllib.request.urlopen(request).read()
         image = Image.open(io.BytesIO(img_url))
-        shape = image.size
 
         img_array = np.array(image)
-        color_image = color_numpy(color, shape)
+        image_array = crop_to_square(img_array)
+        color_image = color_numpy(color)
 
-        image_path = image_folder_path + f"{img_number}.png"
-        color_path = color_folder_path + f"{img_number}.png"
+        image_path = image_folder_path + f"{img_counter}.png"
+        color_path = color_folder_path + f"{img_counter}.png"
         
-        Image.fromarray(img_array).save(image_path, format='PNG')
+        Image.fromarray(image_array).save(image_path, format='PNG')
         Image.fromarray(color_image).save(color_path, format='PNG')
 
+        img_counter += 1
+        if img_counter%1000 == 0:
+            print(f"{img_counter} images saved")
     except Exception as e:
         print(f"Error downloading {img_number} {url}: {e}")
 
