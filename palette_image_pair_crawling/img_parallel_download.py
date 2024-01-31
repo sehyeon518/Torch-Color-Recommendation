@@ -6,8 +6,8 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
-image_folder_path = r"/home/sehyeon/Downloads/Image/"
-color_folder_path = r"/home/sehyeon/Downloads/Color/"
+image_folder_path = r"E:\palette_and_images\Image\\"
+color_folder_path = r"E:\palette_and_images\Palette\\"
 
 
 def color_numpy(rgb, shape):
