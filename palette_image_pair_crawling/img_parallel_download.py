@@ -55,8 +55,8 @@ def download_image(url, color, img_number):
         image_array = crop_to_square(img_array)
         color_image = color_numpy(color)
 
-        image_path = image_folder_path + f"{img_counter}.png"
-        color_path = color_folder_path + f"{img_counter}.png"
+        image_path = image_folder_path + f"{img_number}.png"
+        color_path = color_folder_path + f"{img_number}.png"
         
         Image.fromarray(image_array).save(image_path, format='PNG')
         Image.fromarray(color_image).save(color_path, format='PNG')
