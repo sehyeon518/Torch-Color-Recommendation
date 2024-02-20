@@ -17,7 +17,9 @@
 
 ## Reference
 - favorfit recommend templates
+
 ### Library
 - **colorthief**: 이미지에서 주요 색상을 추출하기 위해 사용됩니다.
+
 ### Train
 - Train with Pytorch - [train.ipynb](../color_classification/Classification/train.ipynb)
