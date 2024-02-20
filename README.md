@@ -30,6 +30,13 @@ Total params: 1,143,324
     - 각 팔레트의 네 가지 색상의 RGB(Red, Green, Blue), HSV(Hue, Saturation, Value), YCrCb(Y, Cr, Cb) 값과 이에 대한 통계량을 계산하여 입력 데이터로 사용합니다.
     - 각 팔레트의 다섯 번째 색상을 해당 팔레트의 클래스로 설정하여 분류 문제로 사용합니다.
     - 이러한 처리를 거친 데이터셋은 모델의 훈련에 사용되며, 입력 데이터로는 각 팔레트의 네 가지 색상과 그에 대한 통계량이 포함되어 있으며, 출력 데이터는 해당 팔레트의 다섯 번째 색상입니다.
+- **Dataloader**
+  - 데이터셋 로드
+    ```python
+    dataset = load_dataset(path="color_classification/Classification")
+    dataset = dataset["train"]
+    ```
+    datasets.load_dataset 함수를 사용하여 데이터셋을 로드합니다. 이 데이터셋은 훈련 데이터로 사용됩니다.
 
 
 ## References
