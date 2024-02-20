@@ -28,6 +28,8 @@ Total params: 1,143,324
 ----------------------------------------------------------------
 ```
 
+![model_graph](https://github.com/sehyeon518/Torch-Color-Recommendation/assets/84698896/59688fe5-1369-4bd2-be9d-639b6de7ad49)
+
 ## Dataset
 - **Adobe Color**: 이 데이터셋은 다섯 가지 색으로 구성된 palette의 RGB 색상 값을 포함합니다. 총 14,000개의 palette가 있습니다.
 - **Coolors List of Colors** : 이 데이터셋은 연속된 RGB 값(255 * 255 * 255)을 540 가지로 분류된 색상 목록입니다.
